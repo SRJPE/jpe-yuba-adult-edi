@@ -1,10 +1,18 @@
 library(tidyverse)
 library(googleCloudStorageR)
 
+# TODO personnel
+# TODO title
+# TODO keyword set
+# TODO funding
+# TODO project
+# TODO coverage
+
 
 # pull in data from google cloud ---------------------------------------------------
 # TODO this will be updated to pull from elsewhere ?
 # TODO not using upstream passage estimates because they are summarized by year
+# TODO what is the unit for latitude/longitude
 
 gcs_auth(json_file = Sys.getenv("GCS_AUTH_FILE"))
 gcs_global_bucket(bucket = Sys.getenv("GCS_DEFAULT_BUCKET"))
@@ -36,6 +44,7 @@ carcass_raw <- read.csv(here::here("data-raw", "standard_carcass.csv")) |>
 
 # clean data --------------------------------------------------------------
 # TODO do we want to use the yuba_redd dataset or the standard? most of these columns are empty
+# TODO filter redd to only chinook and unknown?
 redd <- redd_raw |>
   mutate(date = as.Date(date)) |>
   select(-c(reach, river_mile, fish_guarding, redd_measured, redd_width, redd_length,
@@ -47,6 +56,7 @@ redd <- redd_raw |>
 up <- up_raw |>
   select(-c(run, sex, viewing_condition, spawning_condition,
             jack_size, flow, temperature, comments)) |>
+  select(-stream) |>
   glimpse()
 
 carcass <- carcass_raw |>
