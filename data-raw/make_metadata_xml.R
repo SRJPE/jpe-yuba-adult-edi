@@ -1,8 +1,6 @@
 library(EDIutils)
 library(tidyverse)
-
 library(EMLaide)
-library(tidyverse)
 library(readxl)
 library(EML)
 
@@ -46,15 +44,11 @@ dataset <- list() %>%
   add_datatable(datatable_metadata)
 
 # GO through and check on all units
-custom_units <- data.frame(id = c("number of rotations", "NTU", "revolutions per minute", "number of fish", "days"),
-                           unitType = c("dimensionless", "dimensionless", "dimensionless", "dimensionless", "dimensionless"),
-                           parentSI = c(NA, NA, NA, NA, NA),
-                           multiplierToSI = c(NA, NA, NA, NA, NA),
-                           description = c("number of rotations",
-                                           "nephelometric turbidity units, common unit for measuring turbidity",
-                                           "number of revolutions per minute",
-                                           "number of fish counted",
-                                           "number of days"))
+custom_units <- data.frame(id = c("count of fish"),
+                           unitType = c("dimensionless"),
+                           parentSI = c(NA),
+                           multiplierToSI = c(NA),
+                           description = c("number of fish counted"))
 
 
 unitList <- EML::set_unitList(custom_units)
