@@ -57,14 +57,14 @@ carcass <- carcass_raw |>
 
 
 # write files -------------------------------------------------------------
-write.csv(redd, here::here("data", "redd.csv"), row.names = FALSE)
-write.csv(up, here::here("data", "upstream_passage.csv"), row.names = FALSE)
-write.csv(carcass, here::here("data", "carcass.csv"), row.names = FALSE)
+write.csv(redd, here::here("data", "yuba_redd.csv"), row.names = FALSE)
+write.csv(up, here::here("data", "yuba_upstream_passage.csv"), row.names = FALSE)
+write.csv(carcass, here::here("data", "yuba_carcass.csv"), row.names = FALSE)
 
 
 # review ------------------------------------------------------------------
-read.csv(here::here("data", "redd.csv")) |> glimpse()
-read.csv(here::here("data", "upstream_passage.csv")) |> glimpse()
-read.csv(here::here("data", "carcass.csv")) |> glimpse()
+read.csv(here::here("data", "yuba_redd.csv")) |> glimpse()
+read.csv(here::here("data", "yuba_upstream_passage.csv")) |> glimpse()
+read.csv(here::here("data", "yuba_carcass.csv")) |> glimpse()
 
 
