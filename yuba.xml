@@ -30,7 +30,7 @@
       <electronicMailAddress>jason.kindopp@water.ca.gov</electronicMailAddress>
       <role>principal investigator</role>
     </associatedParty>
-    <pubDate>2023-11-01</pubDate>
+    <pubDate>2023-11-02</pubDate>
     <abstract>
       <para>
     Abstract
@@ -147,7 +147,7 @@
     </coverage>
     <maintenance>
       <description>ongoing</description>
-      <maintenanceUpdateFrequency>monthly</maintenanceUpdateFrequency>
+      <maintenanceUpdateFrequency>annually</maintenanceUpdateFrequency>
     </maintenance>
     <contact>
       <individualName>
@@ -311,12 +311,12 @@
         <attribute>
           <attributeName>species</attributeName>
           <attributeLabel>redd</attributeLabel>
-          <attributeDefinition>Species associated with the sampled redd</attributeDefinition>
+          <attributeDefinition>Species associated with the sampled redd. Levels = c("chinook", "unknown", "steelhead")</attributeDefinition>
           <measurementScale>
             <ordinal>
               <nonNumericDomain>
                 <textDomain>
-                  <definition>Species associated with the sampled redd</definition>
+                  <definition>Species associated with the sampled redd. Levels = c("chinook", "unknown", "steelhead")</definition>
                 </textDomain>
               </nonNumericDomain>
             </ordinal>
@@ -325,7 +325,7 @@
         <attribute>
           <attributeName>num_of_fish_on_redd</attributeName>
           <attributeLabel>redd</attributeLabel>
-          <attributeDefinition>Number of fish observed on the redd at time of sampling Levels = c("chinook", "unknown", "steelhead")</attributeDefinition>
+          <attributeDefinition>Number of fish observed on the redd at time of sampling</attributeDefinition>
           <measurementScale>
             <ratio>
               <unit>
