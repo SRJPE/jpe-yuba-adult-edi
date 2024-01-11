@@ -44,7 +44,7 @@ carcass_raw <- read.csv(here::here("data-raw", "standard_carcass.csv")) |>
 redd <- redd_raw |>
   mutate(date = as.Date(date)) |>
   select(-c(reach, river_mile, fish_guarding, redd_measured, redd_width, redd_length,
-            age, age_index, survey_method, run, year, starting_elevation_ft,
+            age, age_index, method, run, year, starting_elevation_ft,
             redd_substrate_class, tail_substrate_class, pre_redd_substrate_class)) |> # remove empty columns
   select(-stream) |> # not necessary
   glimpse()
@@ -57,7 +57,7 @@ up <- up_raw |>
 
 carcass <- carcass_raw |>
   select(-c(survey_method, reach, run, mark_recapture, tag_id,
-            tag_col, week, head_tag)) |> # empty
+            tag_col, week, head_tag, species_code)) |> # empty
   select(-stream) |> # no need
   glimpse()
 
