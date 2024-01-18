@@ -30,7 +30,7 @@
       <electronicMailAddress>jason.kindopp@water.ca.gov</electronicMailAddress>
       <role>principal investigator</role>
     </associatedParty>
-    <pubDate>2023-11-02</pubDate>
+    <pubDate>2024-01-18</pubDate>
     <abstract>
       <para>
     Abstract
@@ -257,20 +257,6 @@
           </measurementScale>
         </attribute>
         <attribute>
-          <attributeName>redd_id</attributeName>
-          <attributeLabel>redd</attributeLabel>
-          <attributeDefinition>Unique identifier assigned to each redd sampled</attributeDefinition>
-          <measurementScale>
-            <ordinal>
-              <nonNumericDomain>
-                <textDomain>
-                  <definition>Unique identifier assigned to each redd sampled</definition>
-                </textDomain>
-              </nonNumericDomain>
-            </ordinal>
-          </measurementScale>
-        </attribute>
-        <attribute>
           <attributeName>velocity</attributeName>
           <attributeLabel>redd</attributeLabel>
           <attributeDefinition>Stream velocity measured during sampling</attributeDefinition>
@@ -287,6 +273,34 @@
                 </bounds>
               </numericDomain>
             </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>species</attributeName>
+          <attributeLabel>redd</attributeLabel>
+          <attributeDefinition>Species associated with the sampled redd. Levels = c("chinook", "unknown", "steelhead")</attributeDefinition>
+          <measurementScale>
+            <ordinal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Species associated with the sampled redd. Levels = c("chinook", "unknown", "steelhead")</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </ordinal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>run</attributeName>
+          <attributeLabel>redd</attributeLabel>
+          <attributeDefinition>Run designation of fish associated with redd. Levels = "not recorded"</attributeDefinition>
+          <measurementScale>
+            <ordinal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Run designation of fish associated with redd. Levels = "not recorded"</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </ordinal>
           </measurementScale>
         </attribute>
         <attribute>
@@ -309,14 +323,14 @@
           </measurementScale>
         </attribute>
         <attribute>
-          <attributeName>species</attributeName>
+          <attributeName>redd_id</attributeName>
           <attributeLabel>redd</attributeLabel>
-          <attributeDefinition>Species associated with the sampled redd. Levels = c("chinook", "unknown", "steelhead")</attributeDefinition>
+          <attributeDefinition>Unique identifier assigned to each redd sampled</attributeDefinition>
           <measurementScale>
             <ordinal>
               <nonNumericDomain>
                 <textDomain>
-                  <definition>Species associated with the sampled redd. Levels = c("chinook", "unknown", "steelhead")</definition>
+                  <definition>Unique identifier assigned to each redd sampled</definition>
                 </textDomain>
               </nonNumericDomain>
             </ordinal>
@@ -345,10 +359,10 @@
       <numberOfRecords>1924</numberOfRecords>
     </dataTable>
     <dataTable>
-      <entityName>yuba_upstream_passage.csv</entityName>
+      <entityName>yuba_escapement_estimates.csv</entityName>
       <entityDescription>Daily upstream passage data</entityDescription>
       <physical>
-        <objectName>yuba_upstream_passage.csv</objectName>
+        <objectName>yuba_escapement_estimates.csv</objectName>
         <size unit="bytes">14</size>
         <authentication method="MD5">3be7b8b182ccd96e48989b4e57311193</authentication>
         <dataFormat>
@@ -363,14 +377,14 @@
         </dataFormat>
         <distribution>
           <online>
-            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-yuba-edi/main/data/yuba_upstream_passage.csv</url>
+            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-yuba-edi/main/data/yuba_escapement_estimates.csv</url>
           </online>
         </distribution>
       </physical>
       <attributeList>
         <attribute>
           <attributeName>date</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
+          <attributeLabel>escapement_estimates</attributeLabel>
           <attributeDefinition>Date the upstream passage data were recorded</attributeDefinition>
           <measurementScale>
             <dateTime>
@@ -386,7 +400,7 @@
         </attribute>
         <attribute>
           <attributeName>time</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
+          <attributeLabel>escapement_estimates</attributeLabel>
           <attributeDefinition>Time of day the upstream passage count was recorded</attributeDefinition>
           <measurementScale>
             <dateTime>
@@ -402,7 +416,7 @@
         </attribute>
         <attribute>
           <attributeName>count</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
+          <attributeLabel>escapement_estimates</attributeLabel>
           <attributeDefinition>Number of fish counted.</attributeDefinition>
           <measurementScale>
             <ratio>
@@ -421,7 +435,7 @@
         </attribute>
         <attribute>
           <attributeName>adipose_clipped</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
+          <attributeLabel>escapement_estimates</attributeLabel>
           <attributeDefinition>Whether or not the adipose fin was clipped. Levels = c(TRUE, FALSE, NA)</attributeDefinition>
           <measurementScale>
             <nominal>
@@ -435,7 +449,7 @@
         </attribute>
         <attribute>
           <attributeName>passage_direction</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
+          <attributeLabel>escapement_estimates</attributeLabel>
           <attributeDefinition>Directionality of the fish passage. Levels = c("up", "down")</attributeDefinition>
           <measurementScale>
             <nominal>
@@ -449,7 +463,7 @@
         </attribute>
         <attribute>
           <attributeName>ladder</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
+          <attributeLabel>escapement_estimates</attributeLabel>
           <attributeDefinition>Which station the data were collected from. Levels = c("south", "north")</attributeDefinition>
           <measurementScale>
             <nominal>
@@ -463,7 +477,7 @@
         </attribute>
         <attribute>
           <attributeName>hours</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
+          <attributeLabel>escapement_estimates</attributeLabel>
           <attributeDefinition>Number of hours in day that were monitored</attributeDefinition>
           <measurementScale>
             <ratio>
