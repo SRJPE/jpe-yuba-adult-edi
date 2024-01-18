@@ -6,17 +6,17 @@ library(EML)
 
 datatable_metadata <-
   dplyr::tibble(filepath = c("data/yuba_redd.csv",
-                             "data/yuba_upstream_passage.csv",
+                             "data/yuba_escapement_estimates.csv",
                              "data/yuba_carcass.csv"),
                 attribute_info = c("data-raw/metadata/yuba_redd_metadata.xlsx",
-                                   "data-raw/metadata/yuba_upstream_passage_metadata.xlsx",
+                                   "data-raw/metadata/yuba_escapement_estimates_metadata.xlsx",
                                    "data-raw/metadata/yuba_carcass_metadata.xlsx"),
                 datatable_description = c("Daily redd survey data",
                                           "Daily upstream passage data",
                                           "Daily carcass data"),
                 datatable_url = paste0("https://raw.githubusercontent.com/SRJPE/jpe-yuba-edi/main/data/",
                                        c("yuba_redd.csv",
-                                         "yuba_upstream_passage.csv",
+                                         "yuba_escapement_estimates.csv",
                                          "yuba_carcass.csv")))
 # save cleaned data to `data/`
 excel_path <- "data-raw/metadata/yuba_adult_metadata.xlsx"
