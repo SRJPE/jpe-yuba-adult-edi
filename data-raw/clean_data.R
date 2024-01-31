@@ -7,6 +7,7 @@ library(googleCloudStorageR)
 # TODO funding
 # TODO project
 # TODO coverage
+# TODO we will need to get updated .csv files from Jacob
 
 # pull in data from google cloud ---------------------------------------------------
 
@@ -32,29 +33,33 @@ redd_raw <- read.csv(here::here("data-raw", "standard_daily_redd.csv")) |>
   filter(stream == "yuba river")
 
 escapement_estimates_raw <- read.csv(here::here("data-raw", "standard_adult_passage_estimate.csv")) |>
-  filter(stream == "Yuba River")
+  filter(stream == "yuba river")
 
 carcass_raw <- read.csv(here::here("data-raw", "standard_carcass.csv")) |>
   filter(stream == "yuba river")
 
 
 # clean data --------------------------------------------------------------
+# TODO redd runs are all not recorded
 redd <- redd_raw |>
   mutate(date = as.Date(date)) |>
   select(-c(reach, river_mile, fish_guarding, redd_measured, redd_width, redd_length,
-            age, age_index, method, year, starting_elevation_ft,
+            age, age_index, survey_method, year, starting_elevation_ft,
             redd_substrate_class, tail_substrate_class, pre_redd_substrate_class)) |> # remove empty columns
   select(-stream) |> # not necessary
   glimpse()
 
+# TODO all run, sex are not recorded
 escapement_estimates <- escapement_estimates_raw |>
-  select(-c(run, sex, viewing_condition, spawning_condition,
-            jack_size, flow, temperature, comments)) |>
+  select(-c(sex, viewing_condition, spawning_condition,
+            jack_size, flow, temperature, comments,
+            confidence_in_sex, fork_length, status, dead)) |>
   select(-stream) |>
   glimpse()
 
+# TODO all run is unknown
 carcass <- carcass_raw |>
-  select(-c(survey_method, reach, run, mark_recapture, tag_id,
+  select(-c(survey_method, reach, mark_recapture, tag_id,
             tag_col, week, head_tag, species_code)) |> # empty
   select(-stream) |> # no need
   glimpse()
