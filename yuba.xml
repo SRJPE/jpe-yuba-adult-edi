@@ -30,7 +30,16 @@
       <electronicMailAddress>jason.kindopp@water.ca.gov</electronicMailAddress>
       <role>principal investigator</role>
     </associatedParty>
-    <pubDate>2024-01-18</pubDate>
+    <associatedParty>
+      <individualName>
+        <givenName>Jacob</givenName>
+        <surName>Vander Meulen</surName>
+      </individualName>
+      <organizationName>Yuba Water Agency</organizationName>
+      <electronicMailAddress>jvandermeulen@yubawater.org</electronicMailAddress>
+      <role>associate</role>
+    </associatedParty>
+    <pubDate>2024-01-31</pubDate>
     <abstract>
       <para>
     Abstract
@@ -62,7 +71,7 @@
     </licensed>
     <coverage>
       <geographicCoverage>
-        <geographicDescription>Yuba River Chinok Snorkel Surveys</geographicDescription>
+        <geographicDescription>Yuba River Chinook Surveys</geographicDescription>
         <boundingCoordinates>
           <westBoundingCoordinate>-121.5063</westBoundingCoordinate>
           <eastBoundingCoordinate>-121.2723</eastBoundingCoordinate>
@@ -76,7 +85,7 @@
             <calendarDate>2004-01-01</calendarDate>
           </beginDate>
           <endDate>
-            <calendarDate>2022-02-28</calendarDate>
+            <calendarDate>2022-01-26</calendarDate>
           </endDate>
         </rangeOfDates>
       </temporalCoverage>
@@ -257,6 +266,20 @@
           </measurementScale>
         </attribute>
         <attribute>
+          <attributeName>redd_id</attributeName>
+          <attributeLabel>redd</attributeLabel>
+          <attributeDefinition>Unique identifier assigned to each redd sampled</attributeDefinition>
+          <measurementScale>
+            <ordinal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Unique identifier assigned to each redd sampled</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </ordinal>
+          </measurementScale>
+        </attribute>
+        <attribute>
           <attributeName>velocity</attributeName>
           <attributeLabel>redd</attributeLabel>
           <attributeDefinition>Stream velocity measured during sampling</attributeDefinition>
@@ -276,17 +299,22 @@
           </measurementScale>
         </attribute>
         <attribute>
-          <attributeName>species</attributeName>
+          <attributeName>redd_count</attributeName>
           <attributeLabel>redd</attributeLabel>
-          <attributeDefinition>Species associated with the sampled redd. Levels = c("chinook", "unknown", "steelhead")</attributeDefinition>
+          <attributeDefinition>Number of redds observed</attributeDefinition>
           <measurementScale>
-            <ordinal>
-              <nonNumericDomain>
-                <textDomain>
-                  <definition>Species associated with the sampled redd. Levels = c("chinook", "unknown", "steelhead")</definition>
-                </textDomain>
-              </nonNumericDomain>
-            </ordinal>
+            <ratio>
+              <unit>
+                <customUnit>count of redds</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>integer</numberType>
+                <bounds>
+                  <minimum exclusive="false">1</minimum>
+                  <maximum exclusive="false">1</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
           </measurementScale>
         </attribute>
         <attribute>
@@ -298,6 +326,20 @@
               <nonNumericDomain>
                 <textDomain>
                   <definition>Run designation of fish associated with redd. Levels = "not recorded"</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </ordinal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>species</attributeName>
+          <attributeLabel>redd</attributeLabel>
+          <attributeDefinition>Species associated with the sampled redd. Levels = c("chinook", "unknown", "steelhead")</attributeDefinition>
+          <measurementScale>
+            <ordinal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Species associated with the sampled redd. Levels = c("chinook", "unknown", "steelhead")</definition>
                 </textDomain>
               </nonNumericDomain>
             </ordinal>
@@ -320,20 +362,6 @@
                 </bounds>
               </numericDomain>
             </ratio>
-          </measurementScale>
-        </attribute>
-        <attribute>
-          <attributeName>redd_id</attributeName>
-          <attributeLabel>redd</attributeLabel>
-          <attributeDefinition>Unique identifier assigned to each redd sampled</attributeDefinition>
-          <measurementScale>
-            <ordinal>
-              <nonNumericDomain>
-                <textDomain>
-                  <definition>Unique identifier assigned to each redd sampled</definition>
-                </textDomain>
-              </nonNumericDomain>
-            </ordinal>
           </measurementScale>
         </attribute>
         <attribute>
@@ -434,6 +462,20 @@
           </measurementScale>
         </attribute>
         <attribute>
+          <attributeName>run</attributeName>
+          <attributeLabel>escapement_estimates</attributeLabel>
+          <attributeDefinition>Run of fish observed</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Run of fish observed</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
           <attributeName>adipose_clipped</attributeName>
           <attributeLabel>escapement_estimates</attributeLabel>
           <attributeDefinition>Whether or not the adipose fin was clipped. Levels = c(TRUE, FALSE, NA)</attributeDefinition>
@@ -494,8 +536,22 @@
             </ratio>
           </measurementScale>
         </attribute>
+        <attribute>
+          <attributeName>method</attributeName>
+          <attributeLabel>escapement_estimates</attributeLabel>
+          <attributeDefinition>Method of data collection. Levels = "video"</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Method of data collection. Levels = "video"</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
       </attributeList>
-      <numberOfRecords>46555</numberOfRecords>
+      <numberOfRecords>46502</numberOfRecords>
     </dataTable>
     <dataTable>
       <entityName>yuba_carcass.csv</entityName>
@@ -613,6 +669,20 @@
           </measurementScale>
         </attribute>
         <attribute>
+          <attributeName>run</attributeName>
+          <attributeLabel>carcass</attributeLabel>
+          <attributeDefinition>Run of carcass observed.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Run of carcass observed.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
           <attributeName>count</attributeName>
           <attributeLabel>carcass</attributeLabel>
           <attributeDefinition>Number of carcasses sampled</attributeDefinition>
@@ -640,6 +710,9 @@
       <unitList>
         <unit id="count of fish" name="count of fish" unitType="dimensionless">
           <description>number of fish counted</description>
+        </unit>
+        <unit id="count of redds" name="count of redds" unitType="dimensionless">
+          <description>number of redds counted</description>
         </unit>
       </unitList>
     </metadata>
