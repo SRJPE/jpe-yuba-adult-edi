@@ -30,7 +30,7 @@
       <electronicMailAddress>jason.kindopp@water.ca.gov</electronicMailAddress>
       <role>principal investigator</role>
     </associatedParty>
-    <pubDate>2023-11-02</pubDate>
+    <pubDate>2024-01-11</pubDate>
     <abstract>
       <para>
     Abstract
@@ -257,20 +257,6 @@
           </measurementScale>
         </attribute>
         <attribute>
-          <attributeName>redd_id</attributeName>
-          <attributeLabel>redd</attributeLabel>
-          <attributeDefinition>Unique identifier assigned to each redd sampled</attributeDefinition>
-          <measurementScale>
-            <ordinal>
-              <nonNumericDomain>
-                <textDomain>
-                  <definition>Unique identifier assigned to each redd sampled</definition>
-                </textDomain>
-              </nonNumericDomain>
-            </ordinal>
-          </measurementScale>
-        </attribute>
-        <attribute>
           <attributeName>velocity</attributeName>
           <attributeLabel>redd</attributeLabel>
           <attributeDefinition>Stream velocity measured during sampling</attributeDefinition>
@@ -283,10 +269,24 @@
                 <numberType>real</numberType>
                 <bounds>
                   <minimum exclusive="false">0</minimum>
-                  <maximum exclusive="false">2.2066669999999999</maximum>
+                  <maximum exclusive="false">2.2066667</maximum>
                 </bounds>
               </numericDomain>
             </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>species</attributeName>
+          <attributeLabel>redd</attributeLabel>
+          <attributeDefinition>Species associated with the sampled redd. Levels = c("chinook", "unknown", "steelhead")</attributeDefinition>
+          <measurementScale>
+            <ordinal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Species associated with the sampled redd. Levels = c("chinook", "unknown", "steelhead")</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </ordinal>
           </measurementScale>
         </attribute>
         <attribute>
@@ -309,14 +309,14 @@
           </measurementScale>
         </attribute>
         <attribute>
-          <attributeName>species</attributeName>
+          <attributeName>redd_id</attributeName>
           <attributeLabel>redd</attributeLabel>
-          <attributeDefinition>Species associated with the sampled redd. Levels = c("chinook", "unknown", "steelhead")</attributeDefinition>
+          <attributeDefinition>Unique identifier assigned to each redd sampled</attributeDefinition>
           <measurementScale>
             <ordinal>
               <nonNumericDomain>
                 <textDomain>
-                  <definition>Species associated with the sampled redd. Levels = c("chinook", "unknown", "steelhead")</definition>
+                  <definition>Unique identifier assigned to each redd sampled</definition>
                 </textDomain>
               </nonNumericDomain>
             </ordinal>

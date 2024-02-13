@@ -33,7 +33,7 @@ redd_raw <- read.csv(here::here("data-raw", "standard_daily_redd.csv")) |>
   filter(stream == "yuba river")
 
 up_raw <- read.csv(here::here("data-raw", "standard_adult_passage_estimate.csv")) |>
-  filter(stream == "Yuba River")
+  filter(stream == "yuba River")
 
 carcass_raw <- read.csv(here::here("data-raw", "standard_carcass.csv")) |>
   filter(stream == "yuba river")
