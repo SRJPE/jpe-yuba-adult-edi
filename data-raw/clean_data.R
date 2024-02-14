@@ -33,7 +33,7 @@ redd_raw <- read.csv(here::here("data-raw", "standard_daily_redd.csv")) |>
   filter(stream == "yuba river")
 
 up_raw <- read.csv(here::here("data-raw", "standard_adult_passage_estimate.csv")) |>
-  filter(stream == "yuba River")
+  filter(stream == "yuba river")
 
 carcass_raw <- read.csv(here::here("data-raw", "standard_carcass.csv")) |>
   filter(stream == "yuba river")
@@ -44,7 +44,7 @@ carcass_raw <- read.csv(here::here("data-raw", "standard_carcass.csv")) |>
 redd <- redd_raw |>
   mutate(date = as.Date(date)) |>
   select(-c(reach, river_mile, fish_guarding, redd_measured, redd_width, redd_length,
-            age, age_index, method, run, year, starting_elevation_ft,
+            age, age_index, run, year, starting_elevation_ft,
             redd_substrate_class, tail_substrate_class, pre_redd_substrate_class)) |> # remove empty columns
   select(-stream) |> # not necessary
   glimpse()
