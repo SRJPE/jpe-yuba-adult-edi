@@ -44,14 +44,15 @@ carcass_raw <- read.csv(here::here("data-raw", "standard_carcass.csv")) |>
 redd <- redd_raw |>
   mutate(date = as.Date(date)) |>
   select(-c(reach, river_mile, fish_guarding, redd_measured, redd_width, redd_length,
-            age, age_index, run, year, starting_elevation_ft,
+            age, age_index, run, survey_method, year, starting_elevation_ft,
             redd_substrate_class, tail_substrate_class, pre_redd_substrate_class)) |> # remove empty columns
   select(-stream) |> # not necessary
   glimpse()
 
 up <- up_raw |>
   select(-c(run, sex, viewing_condition, spawning_condition,
-            jack_size, flow, temperature, comments)) |>
+            jack_size, flow, temperature, comments,
+            confidence_in_sex, status, fork_length, dead)) |>
   select(-stream) |>
   glimpse()
 
@@ -64,13 +65,13 @@ carcass <- carcass_raw |>
 
 # write files -------------------------------------------------------------
 write.csv(redd, here::here("data", "yuba_redd.csv"), row.names = FALSE)
-write.csv(up, here::here("data", "yuba_upstream_passage.csv"), row.names = FALSE)
+write.csv(up, here::here("data", "yuba_escapement.csv"), row.names = FALSE)
 write.csv(carcass, here::here("data", "yuba_carcass.csv"), row.names = FALSE)
 
 
 # review ------------------------------------------------------------------
 read.csv(here::here("data", "yuba_redd.csv")) |> glimpse()
-read.csv(here::here("data", "yuba_upstream_passage.csv")) |> glimpse()
+read.csv(here::here("data", "yuba_escapement.csv")) |> glimpse()
 read.csv(here::here("data", "yuba_carcass.csv")) |> glimpse()
 
 

@@ -30,7 +30,7 @@
       <electronicMailAddress>jason.kindopp@water.ca.gov</electronicMailAddress>
       <role>principal investigator</role>
     </associatedParty>
-    <pubDate>2024-01-11</pubDate>
+    <pubDate>2024-02-14</pubDate>
     <abstract>
       <para>
     Abstract
@@ -161,7 +161,82 @@
       <methodStep>
         <description>
           <para>
-    Methods
+    Yuba River
+  </para>
+          <para>
+    Methods Overview
+  </para>
+          <para>
+    Adult Upstream
+  </para>
+          <para>
+    Yuba River operates a video monitoring system near Daguerre Dam with
+    two ladders (“North” and “South”). This dataset is considered to be
+    a census for spring run chinook because mostly all spawn upstream of
+    Daguerre Dam. Passage estimates using the adult upstream data have
+    been modeled for 2004 - 2021 by Brian Poxon and Paul Bratovich. The
+    modeling approach involves determining the run and interpolating for
+    missing data. 
+  </para>
+          <para>
+    Run differentiation is performed by splitting the dataset into three
+    components (early migrating spring run, late migrating spring run,
+    and fall run) and conducting an iterative analysis to find the
+    “differentiating date” between spring and run as outlined in Poxon
+    and Bratovich (2020). A GAM was used to interpolate missing values
+    (i.e. when the video system was not working or during high flows)
+    but could not be applied for 2016-2017 due to a high number of
+    outages. Adipose fin clip rates were recorded as raw observations
+    but are likely underestimating the contribution of hatchery fish to
+    the population. Additionally, note that the north ladder was closed
+    from February - September 2019.
+  </para>
+          <para>
+    Yuba River consistently collects date, time, count, adipose fin clip
+    status, passage direction (up or down), ladder, and hours and uses a
+    statistical analysis to assign run. 
+  </para>
+          <para>
+    Holding
+  </para>
+          <para>
+    Holding surveys are not conducted on Yuba River.
+  </para>
+          <para>
+    Redd
+  </para>
+          <para>
+    Yuba River has redd survey data from 2009-2021. 2009-2011 data were
+    collected at all reaches, whereas other years were spatially limited
+    and focused on gravel augmentation near Englebright Dam. Using
+    solely Englebright Dam data for all spawning is not recommended. 
+  </para>
+          <para>
+    Yuba River collects date, latitude, longitude, velocity, year,
+    species, run, depth (in meters), redd ID, and number of fish on
+    redds. 
+  </para>
+          <para>
+    Carcass
+  </para>
+          <para>
+    Yuba River has carcass data from 2009-2022 though the methodology is
+    not consistent over all years. In some years carcass surveys were
+    not performed above Daguerre Point Dam because the purpose of
+    surveys shifted toward biometric carcass surveys (with an emphasis
+    on age structure/fecundity). There is anecdotal support for low
+    prespawn mortality as survey crews didn’t encounter dead salmon and
+    didn’t hear about it from fishermen. 
+  </para>
+          <para>
+    Annual Adult Counts 
+  </para>
+          <para>
+    Upstream passage counts exceed redd counts by several orders of
+    magnitude, though this discrepancy is likely due to spatial
+    limitations of the data. Carcass counts are greater than redd counts
+    though less than upstream passage counts which may help determine
+    prespawn mortality.
   </para>
         </description>
       </methodStep>
@@ -257,6 +332,20 @@
           </measurementScale>
         </attribute>
         <attribute>
+          <attributeName>redd_id</attributeName>
+          <attributeLabel>redd</attributeLabel>
+          <attributeDefinition>Unique identifier assigned to each redd sampled</attributeDefinition>
+          <measurementScale>
+            <ordinal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Unique identifier assigned to each redd sampled</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </ordinal>
+          </measurementScale>
+        </attribute>
+        <attribute>
           <attributeName>velocity</attributeName>
           <attributeLabel>redd</attributeLabel>
           <attributeDefinition>Stream velocity measured during sampling</attributeDefinition>
@@ -270,6 +359,25 @@
                 <bounds>
                   <minimum exclusive="false">0</minimum>
                   <maximum exclusive="false">2.2066667</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>redd_count</attributeName>
+          <attributeLabel>redd</attributeLabel>
+          <attributeDefinition>Number of redds observed</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>count of redds</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>integer</numberType>
+                <bounds>
+                  <minimum exclusive="false">1</minimum>
+                  <maximum exclusive="false">1</maximum>
                 </bounds>
               </numericDomain>
             </ratio>
@@ -309,20 +417,6 @@
           </measurementScale>
         </attribute>
         <attribute>
-          <attributeName>redd_id</attributeName>
-          <attributeLabel>redd</attributeLabel>
-          <attributeDefinition>Unique identifier assigned to each redd sampled</attributeDefinition>
-          <measurementScale>
-            <ordinal>
-              <nonNumericDomain>
-                <textDomain>
-                  <definition>Unique identifier assigned to each redd sampled</definition>
-                </textDomain>
-              </nonNumericDomain>
-            </ordinal>
-          </measurementScale>
-        </attribute>
-        <attribute>
           <attributeName>num_of_fish_on_redd</attributeName>
           <attributeLabel>redd</attributeLabel>
           <attributeDefinition>Number of fish observed on the redd at time of sampling</attributeDefinition>
@@ -345,10 +439,10 @@
       <numberOfRecords>1924</numberOfRecords>
     </dataTable>
     <dataTable>
-      <entityName>yuba_upstream_passage.csv</entityName>
+      <entityName>yuba_escapement.csv</entityName>
       <entityDescription>Daily upstream passage data</entityDescription>
       <physical>
-        <objectName>yuba_upstream_passage.csv</objectName>
+        <objectName>yuba_escapement.csv</objectName>
         <size unit="bytes">14</size>
         <authentication method="MD5">3be7b8b182ccd96e48989b4e57311193</authentication>
         <dataFormat>
@@ -363,14 +457,14 @@
         </dataFormat>
         <distribution>
           <online>
-            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-yuba-edi/main/data/yuba_upstream_passage.csv</url>
+            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-yuba-edi/main/data/yuba_escapement.csv</url>
           </online>
         </distribution>
       </physical>
       <attributeList>
         <attribute>
           <attributeName>date</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
+          <attributeLabel>escapement</attributeLabel>
           <attributeDefinition>Date the upstream passage data were recorded</attributeDefinition>
           <measurementScale>
             <dateTime>
@@ -386,7 +480,7 @@
         </attribute>
         <attribute>
           <attributeName>time</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
+          <attributeLabel>escapement</attributeLabel>
           <attributeDefinition>Time of day the upstream passage count was recorded</attributeDefinition>
           <measurementScale>
             <dateTime>
@@ -402,7 +496,7 @@
         </attribute>
         <attribute>
           <attributeName>count</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
+          <attributeLabel>escapement</attributeLabel>
           <attributeDefinition>Number of fish counted.</attributeDefinition>
           <measurementScale>
             <ratio>
@@ -421,7 +515,7 @@
         </attribute>
         <attribute>
           <attributeName>adipose_clipped</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
+          <attributeLabel>escapement</attributeLabel>
           <attributeDefinition>Whether or not the adipose fin was clipped. Levels = c(TRUE, FALSE, NA)</attributeDefinition>
           <measurementScale>
             <nominal>
@@ -435,7 +529,7 @@
         </attribute>
         <attribute>
           <attributeName>passage_direction</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
+          <attributeLabel>escapement</attributeLabel>
           <attributeDefinition>Directionality of the fish passage. Levels = c("up", "down")</attributeDefinition>
           <measurementScale>
             <nominal>
@@ -449,7 +543,7 @@
         </attribute>
         <attribute>
           <attributeName>ladder</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
+          <attributeLabel>escapement</attributeLabel>
           <attributeDefinition>Which station the data were collected from. Levels = c("south", "north")</attributeDefinition>
           <measurementScale>
             <nominal>
@@ -463,7 +557,7 @@
         </attribute>
         <attribute>
           <attributeName>hours</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
+          <attributeLabel>escapement</attributeLabel>
           <attributeDefinition>Number of hours in day that were monitored</attributeDefinition>
           <measurementScale>
             <ratio>
@@ -480,8 +574,22 @@
             </ratio>
           </measurementScale>
         </attribute>
+        <attribute>
+          <attributeName>method</attributeName>
+          <attributeLabel>escapement</attributeLabel>
+          <attributeDefinition>Method by which data were collected. Levels = "video"</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Method by which data were collected. Levels = "video"</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
       </attributeList>
-      <numberOfRecords>46555</numberOfRecords>
+      <numberOfRecords>46502</numberOfRecords>
     </dataTable>
     <dataTable>
       <entityName>yuba_carcass.csv</entityName>
@@ -626,6 +734,9 @@
       <unitList>
         <unit id="count of fish" name="count of fish" unitType="dimensionless">
           <description>number of fish counted</description>
+        </unit>
+        <unit id="count of redds" name="count of redds" unitType="dimensionless">
+          <description>number of redds counted</description>
         </unit>
       </unitList>
     </metadata>
