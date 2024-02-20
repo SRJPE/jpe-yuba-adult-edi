@@ -5,19 +5,15 @@ library(readxl)
 library(EML)
 
 datatable_metadata <-
-  dplyr::tibble(filepath = c("data/yuba_redd.csv",
-                             "data/yuba_escapement.csv",
-                             "data/yuba_carcass.csv"),
-                attribute_info = c("data-raw/metadata/yuba_redd_metadata.xlsx",
-                                   "data-raw/metadata/yuba_escapement_metadata.xlsx",
-                                   "data-raw/metadata/yuba_carcass_metadata.xlsx"),
-                datatable_description = c("Daily redd survey data",
-                                          "Daily upstream passage data",
-                                          "Daily carcass data"),
+  dplyr::tibble(filepath = c("data/yuba_upstream_passage.csv",
+                             "data/yuba_upstream_passage_estimates.csv"),
+                attribute_info = c("data-raw/metadata/yuba_upstream_passage_metadata.xlsx",
+                                   "data-raw/metadata/yuba_upstream_passage_estimates_metadata.xlsx"),
+                datatable_description = c("Daily upstream passage counts",
+                                          "Yearly interpolated upstream passage counts"),
                 datatable_url = paste0("https://raw.githubusercontent.com/SRJPE/jpe-yuba-edi/main/data/",
-                                       c("yuba_redd.csv",
-                                         "yuba_escapement.csv",
-                                         "yuba_carcass.csv")))
+                                       c("yuba_upstream_passage.csv",
+                                         "yuba_upstream_passage_estimates.csv")))
 # save cleaned data to `data/`
 excel_path <- "data-raw/metadata/yuba_adult_metadata.xlsx"
 sheets <- readxl::excel_sheets(excel_path)
@@ -30,25 +26,25 @@ methods_docx <- "data-raw/metadata/methods.docx"
 #edi_number <- reserve_edi_id(user_id = Sys.getenv("EDI_USER_ID"), password = Sys.getenv("EDI_PASSWORD"))
 edi_number <- "yuba"
 
-dataset <- list() %>%
-  add_pub_date() %>%
-  add_title(metadata$title) %>%
-  add_personnel(metadata$personnel) %>%
-  add_keyword_set(metadata$keyword_set) %>%
-  add_abstract(abstract_docx) %>%
-  add_license(metadata$license) %>%
-  add_method(methods_docx) %>%
-  add_maintenance(metadata$maintenance) %>%
-  add_project(metadata$funding) %>%
-  add_coverage(metadata$coverage, metadata$taxonomic_coverage) %>%
+dataset <- list() |>
+  add_pub_date() |>
+  add_title(metadata$title) |>
+  add_personnel(metadata$personnel) |>
+  add_keyword_set(metadata$keyword_set) |>
+  add_abstract(abstract_docx) |>
+  add_license(metadata$license) |>
+  add_method(methods_docx) |>
+  add_maintenance(metadata$maintenance) |>
+  add_project(metadata$funding) |>
+  add_coverage(metadata$coverage, metadata$taxonomic_coverage) |>
   add_datatable(datatable_metadata)
 
 # GO through and check on all units
-custom_units <- data.frame(id = c("count of fish", "count of redds"),
-                           unitType = c("dimensionless", "dimensionless"),
-                           parentSI = c(NA, NA),
-                           multiplierToSI = c(NA, NA),
-                           description = c("number of fish counted", "number of redds counted"))
+custom_units <- data.frame(id = c("count of fish"),
+                           unitType = c("dimensionless"),
+                           parentSI = c(NA),
+                           multiplierToSI = c(NA),
+                           description = c("number of fish counted"))
 
 
 unitList <- EML::set_unitList(custom_units)
