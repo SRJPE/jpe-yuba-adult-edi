@@ -30,7 +30,7 @@
       <electronicMailAddress>jason.kindopp@water.ca.gov</electronicMailAddress>
       <role>principal investigator</role>
     </associatedParty>
-    <pubDate>2024-02-20</pubDate>
+    <pubDate>2024-02-22</pubDate>
     <abstract>
       <para>
     Abstract
@@ -160,84 +160,48 @@
     <methods>
       <methodStep>
         <description>
-          <para>
-    Yuba River
-  </para>
-          <para>
-    Methods Overview
-  </para>
-          <para>
-    Adult Upstream
-  </para>
-          <para>
-    Yuba River operates a video monitoring system near Daguerre Dam with
-    two ladders (“North” and “South”). This dataset is considered to be
-    a census for spring run chinook because mostly all spawn upstream of
-    Daguerre Dam. Passage estimates using the adult upstream data have
-    been modeled for 2004 - 2021 by Brian Poxon and Paul Bratovich. The
-    modeling approach involves determining the run and interpolating for
-    missing data. 
-  </para>
-          <para>
-    Run differentiation is performed by splitting the dataset into three
-    components (early migrating spring run, late migrating spring run,
-    and fall run) and conducting an iterative analysis to find the
-    “differentiating date” between spring and run as outlined in Poxon
-    and Bratovich (2020). A GAM was used to interpolate missing values
-    (i.e. when the video system was not working or during high flows)
-    but could not be applied for 2016-2017 due to a high number of
-    outages. Adipose fin clip rates were recorded as raw observations
-    but are likely underestimating the contribution of hatchery fish to
-    the population. Additionally, note that the north ladder was closed
-    from February - September 2019.
-  </para>
-          <para>
-    Yuba River consistently collects date, time, count, adipose fin clip
-    status, passage direction (up or down), ladder, and hours and uses a
-    statistical analysis to assign run. 
-  </para>
-          <para>
-    Holding
-  </para>
-          <para>
-    Holding surveys are not conducted on Yuba River.
-  </para>
-          <para>
-    Redd
-  </para>
-          <para>
-    Yuba River has redd survey data from 2009-2021. 2009-2011 data were
-    collected at all reaches, whereas other years were spatially limited
-    and focused on gravel augmentation near Englebright Dam. Using
-    solely Englebright Dam data for all spawning is not recommended. 
-  </para>
-          <para>
-    Yuba River collects date, latitude, longitude, velocity, year,
-    species, run, depth (in meters), redd ID, and number of fish on
-    redds. 
-  </para>
-          <para>
-    Carcass
-  </para>
-          <para>
-    Yuba River has carcass data from 2009-2022 though the methodology is
-    not consistent over all years. In some years carcass surveys were
-    not performed above Daguerre Point Dam because the purpose of
-    surveys shifted toward biometric carcass surveys (with an emphasis
-    on age structure/fecundity). There is anecdotal support for low
-    prespawn mortality as survey crews didn’t encounter dead salmon and
-    didn’t hear about it from fishermen. 
-  </para>
-          <para>
-    Annual Adult Counts 
-  </para>
-          <para>
-    Upstream passage counts exceed redd counts by several orders of
-    magnitude, though this discrepancy is likely due to spatial
-    limitations of the data. Carcass counts are greater than redd counts
-    though less than upstream passage counts which may help determine
-    prespawn mortality.
-  </para>
+          <section>
+            <title>Data Types</title>
+            <para>
+      Upstream passage
+    </para>
+          </section>
+          <section>
+            <title>Adult Upstream</title>
+            <para><emphasis>Objective:</emphasis> Estimate spring-run spawning
+      population
+    </para>
+            <para><emphasis>Type:</emphasis> VAKi Riverwatcher
+    </para>
+            <para><emphasis>Location:</emphasis> Near Daguerre Dam
+    </para>
+            <para>
+              <emphasis>Times of operation:</emphasis>
+            </para>
+            <para>
+      Yuba River operates a video monitoring system near Daguerre Dam
+      with two ladders (North and South). This dataset is considered to
+      be a census for spring run chinook because mostly all spawn
+      upstream of Daguerre Dam. Passage estimates using the adult
+      upstream data have been modeled for 2004 - 2021 by Brian Poxon and
+      Paul Bratovich. The modeling approach involves determining the run
+      and interpolating for missing data.
+    </para>
+            <para>
+      Run differentiation is performed by splitting the dataset into
+      three components (early migrating spring run, late migrating
+      spring run, and fall run) and conducting an iterative analysis to
+      find the differentiating date between spring and run as outlined
+      in Poxon and Bratovich (2020). A Generalized Additive Model (GAM)
+      was used to interpolate missing values (i.e. when the video system
+      was not working or during high flows) but could not be applied for
+      2016-2017 due to a high number of outages. Adipose fin clip rates
+      were recorded as raw observations but are likely underestimating
+      the contribution of hatchery fish to the population. Additionally,
+      note that the north ladder was closed from February - September
+      2019.
+    </para>
+          </section>
         </description>
       </methodStep>
     </methods>
