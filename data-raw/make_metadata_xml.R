@@ -5,15 +5,15 @@ library(readxl)
 library(EML)
 
 datatable_metadata <-
-  dplyr::tibble(filepath = c("data/yuba_upstream_passage.csv",
-                             "data/yuba_upstream_passage_estimates.csv"),
-                attribute_info = c("data-raw/metadata/yuba_upstream_passage_metadata.xlsx",
-                                   "data-raw/metadata/yuba_upstream_passage_estimates_metadata.xlsx"),
-                datatable_description = c("Daily upstream passage counts",
-                                          "Yearly interpolated upstream passage counts"),
+  dplyr::tibble(filepath = c("data/yuba_instantaneous_passage.csv",
+                             "data/yuba_daily_uncorrected_passage.csv"),
+                attribute_info = c("data-raw/metadata/yuba_instantaneous_passage.xlsx",
+                                   "data-raw/metadata/yuba_daily_uncorrected_passage.xlsx"),
+                datatable_description = c("Instantaneous passage records",
+                                          "Uncorrected daily net passage counts"),
                 datatable_url = paste0("https://raw.githubusercontent.com/SRJPE/jpe-yuba-edi/main/data/",
-                                       c("yuba_upstream_passage.csv",
-                                         "yuba_upstream_passage_estimates.csv")))
+                                       c("yuba_instantaneous_passage.csv",
+                                         "yuba_daily_uncorrected_passage.csv")))
 # save cleaned data to `data/`
 excel_path <- "data-raw/metadata/yuba_adult_metadata.xlsx"
 sheets <- readxl::excel_sheets(excel_path)
@@ -41,11 +41,11 @@ dataset <- list() |>
   add_datatable(datatable_metadata)
 
 # GO through and check on all units
-custom_units <- data.frame(id = c("count of fish"),
-                           unitType = c("dimensionless"),
-                           parentSI = c(NA),
-                           multiplierToSI = c(NA),
-                           description = c("number of fish counted"))
+custom_units <- data.frame(id = c("count of fish", "proportion"),
+                           unitType = c("dimensionless", "dimensionless"),
+                           parentSI = c(NA, NA),
+                           multiplierToSI = c(NA, NA),
+                           description = c("number of fish counted", "proportion of day operational"))
 
 
 unitList <- EML::set_unitList(custom_units)

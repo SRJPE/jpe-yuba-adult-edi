@@ -30,7 +30,7 @@
       <electronicMailAddress>jason.kindopp@water.ca.gov</electronicMailAddress>
       <role>principal investigator</role>
     </associatedParty>
-    <pubDate>2024-02-22</pubDate>
+    <pubDate>2024-04-03</pubDate>
     <abstract>
       <para>
     Abstract
@@ -218,10 +218,10 @@
       </personnel>
     </project>
     <dataTable>
-      <entityName>yuba_upstream_passage.csv</entityName>
-      <entityDescription>Daily upstream passage counts</entityDescription>
+      <entityName>yuba_instantaneous_passage.csv</entityName>
+      <entityDescription>Instantaneous passage records</entityDescription>
       <physical>
-        <objectName>yuba_upstream_passage.csv</objectName>
+        <objectName>yuba_instantaneous_passage.csv</objectName>
         <size unit="bytes">14</size>
         <authentication method="MD5">3be7b8b182ccd96e48989b4e57311193</authentication>
         <dataFormat>
@@ -236,22 +236,22 @@
         </dataFormat>
         <distribution>
           <online>
-            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-yuba-edi/main/data/yuba_upstream_passage.csv</url>
+            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-yuba-edi/main/data/yuba_instantaneous_passage.csv</url>
           </online>
         </distribution>
       </physical>
       <attributeList>
         <attribute>
           <attributeName>date</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
-          <attributeDefinition>Date the upstream passage data were recorded</attributeDefinition>
+          <attributeLabel>yuba_instantaneous_passage</attributeLabel>
+          <attributeDefinition>Date steamp of fish passage event.</attributeDefinition>
           <measurementScale>
             <dateTime>
               <formatString>YYYY-MM-DD</formatString>
               <dateTimeDomain>
                 <bounds>
-                  <minimum exclusive="false">2004-01-01</minimum>
-                  <maximum exclusive="false">2020-02-28</maximum>
+                  <minimum exclusive="false">2004-03-08</minimum>
+                  <maximum exclusive="false">2022-12-28</maximum>
                 </bounds>
               </dateTimeDomain>
             </dateTime>
@@ -259,11 +259,11 @@
         </attribute>
         <attribute>
           <attributeName>time</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
-          <attributeDefinition>Time of day the upstream passage count was recorded</attributeDefinition>
+          <attributeLabel>yuba_instantaneous_passage</attributeLabel>
+          <attributeDefinition>Time stamp of fish passage event.</attributeDefinition>
           <measurementScale>
             <dateTime>
-              <formatString>hh:mm:ss</formatString>
+              <formatString>H:M:S</formatString>
               <dateTimeDomain>
                 <bounds>
                   <minimum exclusive="false">00:00:00</minimum>
@@ -274,9 +274,122 @@
           </measurementScale>
         </attribute>
         <attribute>
+          <attributeName>depth</attributeName>
+          <attributeLabel>yuba_instantaneous_passage</attributeLabel>
+          <attributeDefinition>Fish body depth, as estimated by VAKI Winari software.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>millimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">40</minimum>
+                  <maximum exclusive="false">255</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>length</attributeName>
+          <attributeLabel>yuba_instantaneous_passage</attributeLabel>
+          <attributeDefinition>Fish body length, as estimated by VAKI Winari software; see RMT VAKI Riverwatcher Protocol for additional information.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">189</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>ladder</attributeName>
+          <attributeLabel>yuba_instantaneous_passage</attributeLabel>
+          <attributeDefinition>Location of data collection. Levels = c("north", "south"). North refers to DPD North ladder (river right looking downstream); South refers to DPD South ladder (river left looking downstream).</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Location of data collection. Levels = c("north", "south"). North refers to DPD North ladder (river right looking downstream); South refers to DPD South ladder (river left looking downstream).</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>direction_of_passage</attributeName>
+          <attributeLabel>yuba_instantaneous_passage</attributeLabel>
+          <attributeDefinition>Direction of fish travel through VAKI chute. Levels = c("up", "down").</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Direction of fish travel through VAKI chute. Levels = c("up", "down").</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>speed</attributeName>
+          <attributeLabel>yuba_instantaneous_passage</attributeLabel>
+          <attributeDefinition>Speed of fish travel through VAKI chute, as estimated by VAKI Winari software.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>metersPerSecond</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">-2.61</minimum>
+                  <maximum exclusive="false">5.71</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>adipose_clipped</attributeName>
+          <attributeLabel>yuba_instantaneous_passage</attributeLabel>
+          <attributeDefinition>Whether or not fish observed had a clipped adipose fin, determined by PSMFC staff review of VAKI imagery. Levels = c("TRUE", "FALSE", "undetermined").</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Whether or not fish observed had a clipped adipose fin, determined by PSMFC staff review of VAKI imagery. Levels = c("TRUE", "FALSE", "undetermined").</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>species</attributeName>
+          <attributeLabel>yuba_instantaneous_passage</attributeLabel>
+          <attributeDefinition>Species of fish observed. Levels = "chinook".</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Species of fish observed. Levels = "chinook".</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
           <attributeName>count</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
-          <attributeDefinition>Number of fish counted.</attributeDefinition>
+          <attributeLabel>yuba_instantaneous_passage</attributeLabel>
+          <attributeDefinition>Count of fish observed. Each observation in the dataset is for one fish.</attributeDefinition>
           <measurementScale>
             <ratio>
               <unit>
@@ -292,89 +405,14 @@
             </ratio>
           </measurementScale>
         </attribute>
-        <attribute>
-          <attributeName>adipose_clipped</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
-          <attributeDefinition>Whether or not the adipose fin was clipped. Levels = c(TRUE, FALSE, NA)</attributeDefinition>
-          <measurementScale>
-            <nominal>
-              <nonNumericDomain>
-                <textDomain>
-                  <definition>Whether or not the adipose fin was clipped. Levels = c(TRUE, FALSE, NA)</definition>
-                </textDomain>
-              </nonNumericDomain>
-            </nominal>
-          </measurementScale>
-        </attribute>
-        <attribute>
-          <attributeName>passage_direction</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
-          <attributeDefinition>Directionality of the fish passage. Levels = c("up", "down")</attributeDefinition>
-          <measurementScale>
-            <nominal>
-              <nonNumericDomain>
-                <textDomain>
-                  <definition>Directionality of the fish passage. Levels = c("up", "down")</definition>
-                </textDomain>
-              </nonNumericDomain>
-            </nominal>
-          </measurementScale>
-        </attribute>
-        <attribute>
-          <attributeName>ladder</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
-          <attributeDefinition>Which station the data were collected from. Levels = c("south", "north")</attributeDefinition>
-          <measurementScale>
-            <nominal>
-              <nonNumericDomain>
-                <textDomain>
-                  <definition>Which station the data were collected from. Levels = c("south", "north")</definition>
-                </textDomain>
-              </nonNumericDomain>
-            </nominal>
-          </measurementScale>
-        </attribute>
-        <attribute>
-          <attributeName>hours</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
-          <attributeDefinition>Number of hours in day that were monitored</attributeDefinition>
-          <measurementScale>
-            <ratio>
-              <unit>
-                <standardUnit>hour</standardUnit>
-              </unit>
-              <numericDomain>
-                <numberType>integer</numberType>
-                <bounds>
-                  <minimum exclusive="false">0</minimum>
-                  <maximum exclusive="false">24</maximum>
-                </bounds>
-              </numericDomain>
-            </ratio>
-          </measurementScale>
-        </attribute>
-        <attribute>
-          <attributeName>method</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
-          <attributeDefinition>Method by which data were collected. Levels = "video"</attributeDefinition>
-          <measurementScale>
-            <nominal>
-              <nonNumericDomain>
-                <textDomain>
-                  <definition>Method by which data were collected. Levels = "video"</definition>
-                </textDomain>
-              </nonNumericDomain>
-            </nominal>
-          </measurementScale>
-        </attribute>
       </attributeList>
-      <numberOfRecords>46502</numberOfRecords>
+      <numberOfRecords>107557</numberOfRecords>
     </dataTable>
     <dataTable>
-      <entityName>yuba_upstream_passage_estimates.csv</entityName>
-      <entityDescription>Yearly interpolated upstream passage counts</entityDescription>
+      <entityName>yuba_daily_uncorrected_passage.csv</entityName>
+      <entityDescription>Uncorrected daily net passage counts</entityDescription>
       <physical>
-        <objectName>yuba_upstream_passage_estimates.csv</objectName>
+        <objectName>yuba_daily_uncorrected_passage.csv</objectName>
         <size unit="bytes">14</size>
         <authentication method="MD5">3be7b8b182ccd96e48989b4e57311193</authentication>
         <dataFormat>
@@ -389,15 +427,15 @@
         </dataFormat>
         <distribution>
           <online>
-            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-yuba-edi/main/data/yuba_upstream_passage_estimates.csv</url>
+            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-yuba-edi/main/data/yuba_daily_uncorrected_passage.csv</url>
           </online>
         </distribution>
       </physical>
       <attributeList>
         <attribute>
-          <attributeName>year</attributeName>
-          <attributeLabel>upstream_passage_estimates</attributeLabel>
-          <attributeDefinition>Year of data collection</attributeDefinition>
+          <attributeName>date</attributeName>
+          <attributeLabel>yuba_daily_uncorrected_passage</attributeLabel>
+          <attributeDefinition>Calendar date.</attributeDefinition>
           <measurementScale>
             <dateTime>
               <formatString>YYYY-MM-DD</formatString>
@@ -411,9 +449,39 @@
           </measurementScale>
         </attribute>
         <attribute>
-          <attributeName>passage_estimate</attributeName>
-          <attributeLabel>upstream_passage_estimates</attributeLabel>
-          <attributeDefinition>Yearly upstream passage estimate (interpolated)</attributeDefinition>
+          <attributeName>biological_year</attributeName>
+          <attributeLabel>yuba_daily_uncorrected_passage</attributeLabel>
+          <attributeDefinition>Biological year for Yuba River Chinook salmon adult passage. Defined as extending from March 1 through February of the following year annually based on lifestage periodicities identified in RMT (2013).</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY</formatString>
+              <dateTimeDomain>
+                <bounds>
+                  <minimum exclusive="false">2004</minimum>
+                  <maximum exclusive="false">2022</maximum>
+                </bounds>
+              </dateTimeDomain>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>ladder</attributeName>
+          <attributeLabel>yuba_daily_uncorrected_passage</attributeLabel>
+          <attributeDefinition>Ladder location of VAKI Riverwatcher. Levels = c("north", "south"). North refers to Dagurerre Point Dam North ladder (river right looking downstream), south refers to Daguerre Point Dam South ladder (river left looking downstream).</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Ladder location of VAKI Riverwatcher. Levels = c("north", "south"). North refers to Dagurerre Point Dam North ladder (river right looking downstream), south refers to Daguerre Point Dam South ladder (river left looking downstream).</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>count</attributeName>
+          <attributeLabel>yuba_daily_uncorrected_passage</attributeLabel>
+          <attributeDefinition>Daily net upstream count of fish, uncorrected for periods of VAKI Riverwatcher non-operation.</attributeDefinition>
           <measurementScale>
             <ratio>
               <unit>
@@ -422,43 +490,48 @@
               <numericDomain>
                 <numberType>integer</numberType>
                 <bounds>
-                  <minimum exclusive="false">235</minimum>
-                  <maximum exclusive="false">5274</maximum>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">539</maximum>
                 </bounds>
               </numericDomain>
             </ratio>
           </measurementScale>
         </attribute>
         <attribute>
-          <attributeName>run</attributeName>
-          <attributeLabel>upstream_passage_estimates</attributeLabel>
-          <attributeDefinition>Run of fish. Levels = "spring"</attributeDefinition>
+          <attributeName>count_type</attributeName>
+          <attributeLabel>yuba_daily_uncorrected_passage</attributeLabel>
+          <attributeDefinition>Type of count. Levels = c("total fish", "adipose clipped fish"). "Total fish" includes adipose fin intact, adipose fin clipped, and adipose fin unidentified passing through the associated ladder; "adipose fin clipped fish" only includes fish with adipose fin clipped.</attributeDefinition>
           <measurementScale>
             <nominal>
               <nonNumericDomain>
                 <textDomain>
-                  <definition>Run of fish. Levels = "spring"</definition>
+                  <definition>Type of count. Levels = c("total fish", "adipose clipped fish"). "Total fish" includes adipose fin intact, adipose fin clipped, and adipose fin unidentified passing through the associated ladder; "adipose fin clipped fish" only includes fish with adipose fin clipped.</definition>
                 </textDomain>
               </nonNumericDomain>
             </nominal>
           </measurementScale>
         </attribute>
         <attribute>
-          <attributeName>adipose_clipped</attributeName>
-          <attributeLabel>upstream_passage_estimates</attributeLabel>
-          <attributeDefinition>Whether or not the adipose fin was clipped. Levels = FALSE</attributeDefinition>
+          <attributeName>vaki_operation</attributeName>
+          <attributeLabel>yuba_daily_uncorrected_passage</attributeLabel>
+          <attributeDefinition>Daily proportion of hours during which the VAKI Riverwatcher at the associated ladder was operational; values range from 0 (indicating 0 hours of operation) to 1 (indicating 24 hours of operation); inclusive.</attributeDefinition>
           <measurementScale>
-            <nominal>
-              <nonNumericDomain>
-                <textDomain>
-                  <definition>Whether or not the adipose fin was clipped. Levels = FALSE</definition>
-                </textDomain>
-              </nonNumericDomain>
-            </nominal>
+            <ratio>
+              <unit>
+                <customUnit>proportion</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">1</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
           </measurementScale>
         </attribute>
       </attributeList>
-      <numberOfRecords>15</numberOfRecords>
+      <numberOfRecords>27756</numberOfRecords>
     </dataTable>
   </dataset>
   <additionalMetadata>
@@ -466,6 +539,9 @@
       <unitList>
         <unit id="count of fish" name="count of fish" unitType="dimensionless">
           <description>number of fish counted</description>
+        </unit>
+        <unit id="proportion" name="proportion" unitType="dimensionless">
+          <description>proportion of day operational</description>
         </unit>
       </unitList>
     </metadata>
