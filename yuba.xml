@@ -11,23 +11,23 @@
     </allow>
   </access>
   <dataset>
-    <shortName>Yuba River Adult Surveys</shortName>
-    <title>Monitoring adult Chinook salmon throughout the adult lifespan on the Yuba River</title>
+    <shortName>Yuba River Chinook Upstream Passage</shortName>
+    <title>Monitoring adult Chinook salmon upstream passage on Yuba River</title>
     <creator>
       <individualName>
-        <givenName>Casey</givenName>
-        <surName>Campos</surName>
+        <givenName>Jacob</givenName>
+        <surName>Vander Meulen</surName>
       </individualName>
-      <organizationName>California Department of Water Resources</organizationName>
-      <electronicMailAddress>Casey.Campos@water.ca.gov</electronicMailAddress>
+      <organizationName>Yuba Water Agency</organizationName>
+      <electronicMailAddress>JVanderMeulen@yubawater.org</electronicMailAddress>
     </creator>
     <associatedParty>
       <individualName>
-        <givenName>Jason</givenName>
-        <surName>Kindopp</surName>
+        <givenName>Brian</givenName>
+        <surName>Poxon</surName>
       </individualName>
-      <organizationName>California Department of Water Resources</organizationName>
-      <electronicMailAddress>jason.kindopp@water.ca.gov</electronicMailAddress>
+      <organizationName>HDR, Inc.</organizationName>
+      <electronicMailAddress>Brian.Poxon@hdrinc.com</electronicMailAddress>
       <role>principal investigator</role>
     </associatedParty>
     <pubDate>2024-04-03</pubDate>
@@ -46,18 +46,14 @@
     </abstract>
     <keywordSet>
       <keyword>spring run</keyword>
-      <keyword>fall run</keyword>
       <keyword>juvenile production estimate</keyword>
       <keyword>Oncorhynchus tshawytscha</keyword>
-      <keyword>Snorkel survey</keyword>
       <keyword>California</keyword>
       <keyword>Central Valley</keyword>
       <keyword>SRJPE</keyword>
       <keyword>Chinook salmon</keyword>
       <keyword>VAKI Riverwatcher</keyword>
       <keyword>Escapement</keyword>
-      <keyword>Carcass</keyword>
-      <keyword>Redd</keyword>
       <keyword>Upstream Passage</keyword>
     </keywordSet>
     <intellectualRights>
@@ -70,21 +66,21 @@
     </licensed>
     <coverage>
       <geographicCoverage>
-        <geographicDescription>Yuba River Chinok Snorkel Surveys</geographicDescription>
+        <geographicDescription>Yuba River Chinook Upstream Passage</geographicDescription>
         <boundingCoordinates>
-          <westBoundingCoordinate>-121.5063</westBoundingCoordinate>
-          <eastBoundingCoordinate>-121.2723</eastBoundingCoordinate>
-          <northBoundingCoordinate>39.2364</northBoundingCoordinate>
-          <southBoundingCoordinate>39.1824</southBoundingCoordinate>
+          <westBoundingCoordinate>-121.5136</westBoundingCoordinate>
+          <eastBoundingCoordinate>-121.4039</eastBoundingCoordinate>
+          <northBoundingCoordinate>39.217</northBoundingCoordinate>
+          <southBoundingCoordinate>39.1735</southBoundingCoordinate>
         </boundingCoordinates>
       </geographicCoverage>
       <temporalCoverage>
         <rangeOfDates>
           <beginDate>
-            <calendarDate>2004-01-01</calendarDate>
+            <calendarDate>2004-03-01</calendarDate>
           </beginDate>
           <endDate>
-            <calendarDate>2022-02-28</calendarDate>
+            <calendarDate>2023-12-28</calendarDate>
           </endDate>
         </rangeOfDates>
       </temporalCoverage>
@@ -159,11 +155,11 @@
     </maintenance>
     <contact>
       <individualName>
-        <givenName>Casey</givenName>
-        <surName>Campos</surName>
+        <givenName>Jacob</givenName>
+        <surName>Vander Meulen</surName>
       </individualName>
-      <organizationName>California Department of Water Resources</organizationName>
-      <electronicMailAddress>Casey.Campos@water.ca.gov</electronicMailAddress>
+      <organizationName>Yuba Water Agency</organizationName>
+      <electronicMailAddress>JVanderMeulen@yubawater.org</electronicMailAddress>
     </contact>
     <methods>
       <methodStep>
@@ -236,14 +232,14 @@
       </methodStep>
     </methods>
     <project>
-      <title>Monitoring adult Chinook salmon throughout the adult lifespan on the Yuba River</title>
+      <title>Monitoring adult Chinook salmon upstream passage on Yuba River</title>
       <personnel>
         <individualName>
-          <givenName>Casey</givenName>
-          <surName>Campos</surName>
+          <givenName>Jacob</givenName>
+          <surName>Vander Meulen</surName>
         </individualName>
-        <organizationName>California Department of Water Resources</organizationName>
-        <electronicMailAddress>Casey.Campos@water.ca.gov</electronicMailAddress>
+        <organizationName>Yuba Water Agency</organizationName>
+        <electronicMailAddress>JVanderMeulen@yubawater.org</electronicMailAddress>
         <role>Project Lead</role>
       </personnel>
     </project>
