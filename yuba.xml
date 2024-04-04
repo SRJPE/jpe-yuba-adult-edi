@@ -30,6 +30,24 @@
       <electronicMailAddress>Brian.Poxon@hdrinc.com</electronicMailAddress>
       <role>principal investigator</role>
     </associatedParty>
+    <associatedParty>
+      <individualName>
+        <givenName>Casey</givenName>
+        <surName>Campos</surName>
+      </individualName>
+      <organizationName>California Department of Water Resources</organizationName>
+      <electronicMailAddress>Casey.Campos@water.ca.gov</electronicMailAddress>
+      <role>associate</role>
+    </associatedParty>
+    <associatedParty>
+      <individualName>
+        <givenName>Jaso</givenName>
+        <surName>Kindopp</surName>
+      </individualName>
+      <organizationName>California Department of Water Resources</organizationName>
+      <electronicMailAddress>jason.kindopp@water.ca.gov</electronicMailAddress>
+      <role>associate</role>
+    </associatedParty>
     <pubDate>2024-04-03</pubDate>
     <abstract>
       <para>
