@@ -48,7 +48,7 @@
       <electronicMailAddress>jason.kindopp@water.ca.gov</electronicMailAddress>
       <role>associate</role>
     </associatedParty>
-    <pubDate>2024-04-03</pubDate>
+    <pubDate>2024-04-22</pubDate>
     <abstract>
       <para>
     Adult salmonid data on the Yuba River is collected and managed by
@@ -381,25 +381,6 @@
                 </textDomain>
               </nonNumericDomain>
             </nominal>
-          </measurementScale>
-        </attribute>
-        <attribute>
-          <attributeName>speed</attributeName>
-          <attributeLabel>yuba_instantaneous_passage</attributeLabel>
-          <attributeDefinition>Speed of fish travel through VAKI chute, as estimated by VAKI Winari software.</attributeDefinition>
-          <measurementScale>
-            <ratio>
-              <unit>
-                <standardUnit>metersPerSecond</standardUnit>
-              </unit>
-              <numericDomain>
-                <numberType>real</numberType>
-                <bounds>
-                  <minimum exclusive="false">-2.61</minimum>
-                  <maximum exclusive="false">5.71</maximum>
-                </bounds>
-              </numericDomain>
-            </ratio>
           </measurementScale>
         </attribute>
         <attribute>
