@@ -97,9 +97,9 @@ daily_corrected <- daily_corrected_raw |>
                          str_detect(count_type, "fall") ~ "fall",
                          str_detect(count_type, "no_run") ~ "no run differentiation",
                          TRUE ~ NA),
-         adipose_clip = ifelse(str_detect(count_type, "no_ad_clip"), FALSE, TRUE)) |>
+         adipose_clipped = ifelse(str_detect(count_type, "no_ad_clip"), FALSE, TRUE)) |>
+  select(-count_type) |>
   glimpse()
-
 
 # write files -------------------------------------------------------------
 write.csv(instant, here::here("data", "yuba_instantaneous_passage.csv"), row.names = FALSE)
