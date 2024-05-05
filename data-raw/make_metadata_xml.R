@@ -6,14 +6,18 @@ library(EML)
 
 datatable_metadata <-
   dplyr::tibble(filepath = c("data/yuba_instantaneous_passage.csv",
-                             "data/yuba_daily_uncorrected_passage.csv"),
+                             "data/yuba_daily_uncorrected_passage.csv",
+                             "data/yuba_daily_corrected_passage.csv"),
                 attribute_info = c("data-raw/metadata/yuba_instantaneous_passage.xlsx",
-                                   "data-raw/metadata/yuba_daily_uncorrected_passage.xlsx"),
+                                   "data-raw/metadata/yuba_daily_uncorrected_passage.xlsx",
+                                   "data-raw/metadata/yuba_daily_corrected_passage.xlsx"),
                 datatable_description = c("Instantaneous passage records",
-                                          "Uncorrected daily net passage counts"),
+                                          "Uncorrected daily net passage counts",
+                                          "Corrected and run differentiated daily passage counts"),
                 datatable_url = paste0("https://raw.githubusercontent.com/SRJPE/jpe-yuba-edi/main/data/",
                                        c("yuba_instantaneous_passage.csv",
-                                         "yuba_daily_uncorrected_passage.csv")))
+                                         "yuba_daily_uncorrected_passage.csv",
+                                         "yuba_daily_corrected_passage.csv")))
 # save cleaned data to `data/`
 excel_path <- "data-raw/metadata/yuba_adult_metadata.xlsx"
 sheets <- readxl::excel_sheets(excel_path)

@@ -48,7 +48,7 @@
       <electronicMailAddress>jason.kindopp@water.ca.gov</electronicMailAddress>
       <role>associate</role>
     </associatedParty>
-    <pubDate>2024-04-22</pubDate>
+    <pubDate>2024-05-05</pubDate>
     <abstract>
       <para>
     Adult salmonid data on the Yuba River is collected and managed by
@@ -209,12 +209,8 @@
       approach involves determining the run and interpolating for
       missing data.
     </para>
-            <para>
-              <emphasis>Data tables</emphasis>
-            </para>
-            <para>
-      Data is available in tables following sequential QA/QC processes
-      and modeling:
+            <para><emphasis>Data tables</emphasis> Data is available in tables
+      following sequential QA/QC processes and modeling:
     </para>
             <para>
       Instantaneous passage records: data in this file form the base
@@ -230,6 +226,15 @@
       input to the run differentiation analysis.
     </para>
             <para>
+      Corrected daily passage: data in this file are corrected for VAKI
+      operational outages and contain run differentiated daily net
+      Chinook salmon passage estimates. Data in this file represent the
+      output (results) from the count correction and run differentiation
+      analyses presented in Poxon and Bratovich (2020). Please see below
+      for important notes regarding biological years 2016, 2017, and
+      2019.
+    </para>
+            <para>
       Run differentiation is performed by splitting the dataset into
       three components (early migrating spring run, late migrating
       spring run, and fall run) and conducting an iterative analysis to
@@ -240,6 +245,25 @@
       for 2016-2017 due to a high number of outages and the north ladder
       was closed from February - September 2019, both of which are
       important context for data from those years.
+    </para>
+            <para>
+      The 2016 and 2017 annual time series were deemed inappropriate for
+      count correction and run separation analyses due to long periods
+      of VAKI Riverwatcher™ system outages that resulted in incomplete
+      datasets for both years. No estimates (run-differentiated or
+      overall) are possible for these years. The total number of Chinook
+      salmon for these years represent raw counts as affected by VAKI
+      Riverwatcher™ system outages, and do not represent estimated
+      annual abundances.
+    </para>
+            <para>
+      Additionally, run-type differentiation was not possible for
+      biological year 2019 due to an extended closure (February 13, 2019
+      through September 10, 2019) of the DPD North Ladder, which
+      fundamentally altered the temporal patterns of passage at DPD on
+      which the run differentiation analysis is based. As a result, the
+      only possible annual abundance estimate for the 2019 annual time
+      series is Total Chinook Salmon.
     </para>
             <para><emphasis>Works cited</emphasis> Poxon, B. and Bratovich, P. 2020.
       Lower Yuba River Vaki Riverwatcher Chinook Salmon Passage and Run
@@ -557,6 +581,112 @@
         </attribute>
       </attributeList>
       <numberOfRecords>27756</numberOfRecords>
+    </dataTable>
+    <dataTable>
+      <entityName>yuba_daily_corrected_passage.csv</entityName>
+      <entityDescription>Corrected and run differentiated daily passage counts</entityDescription>
+      <physical>
+        <objectName>yuba_daily_corrected_passage.csv</objectName>
+        <size unit="bytes">14</size>
+        <authentication method="MD5">3be7b8b182ccd96e48989b4e57311193</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-yuba-edi/main/data/yuba_daily_corrected_passage.csv</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>date</attributeName>
+          <attributeLabel>yuba_daily_corrected_passage</attributeLabel>
+          <attributeDefinition>Calendar date.</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD</formatString>
+              <dateTimeDomain>
+                <bounds>
+                  <minimum exclusive="false">2004-03-01</minimum>
+                  <maximum exclusive="false">2023-02-28</maximum>
+                </bounds>
+              </dateTimeDomain>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>biological_year</attributeName>
+          <attributeLabel>yuba_daily_corrected_passage</attributeLabel>
+          <attributeDefinition>Biological year for Yuba River Chinook salmon adult passage. Defined as extending from March 1 through February of the following year annually based on lifestage periodicities identified in RMT (2013).</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY</formatString>
+              <dateTimeDomain>
+                <bounds>
+                  <minimum exclusive="false">2004</minimum>
+                  <maximum exclusive="false">2022</maximum>
+                </bounds>
+              </dateTimeDomain>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>count</attributeName>
+          <attributeLabel>yuba_daily_corrected_passage</attributeLabel>
+          <attributeDefinition>Daily net upstream passage estimate of Chinook salmon, reflecting application of the analyses and methodologies presented in Poxon and Bratovich (2020) to correct net upstream counts for periods of VAKI system non-operation and differentiate between run types.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>count of fish</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>integer</numberType>
+                <bounds>
+                  <minimum exclusive="false">-1</minimum>
+                  <maximum exclusive="false">538</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>run</attributeName>
+          <attributeLabel>yuba_daily_corrected_passage</attributeLabel>
+          <attributeDefinition>Run type as differentiated by methods outlined in Poxon and Bratovich (2020). Levels = c("early spring", "late spring", "fall", and "no run differentiated"). "Early spring" are those individuals passing upstream of Daguerre Point Dam from March 1 through July 14; “late spring” are the portion of those individuals passing upstream of Daguerre Point Dam from July 15 through September 30 that are attributed to the spring-run Chinook salmon run type; “fall” are the portion of those individuals passing upstream of Daguerre Point Dam from July 15 through September 30 that are attributed to the spring-run Chinook salmon run type, as well as those individuals passing upstream of Daguerre Point Dam from October 1 through the end of February; “no run differentiated” refers to dates where no run differentiation analysis could be completed. See methods for details on time series from 2016, 2017, and biological year 2019.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Run type as differentiated by methods outlined in Poxon and Bratovich (2020). Levels = c("early spring", "late spring", "fall", and "no run differentiated"). "Early spring" are those individuals passing upstream of Daguerre Point Dam from March 1 through July 14; “late spring” are the portion of those individuals passing upstream of Daguerre Point Dam from July 15 through September 30 that are attributed to the spring-run Chinook salmon run type; “fall” are the portion of those individuals passing upstream of Daguerre Point Dam from July 15 through September 30 that are attributed to the spring-run Chinook salmon run type, as well as those individuals passing upstream of Daguerre Point Dam from October 1 through the end of February; “no run differentiated” refers to dates where no run differentiation analysis could be completed. See methods for details on time series from 2016, 2017, and biological year 2019.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>adipose_clipped</attributeName>
+          <attributeLabel>yuba_daily_corrected_passage</attributeLabel>
+          <attributeDefinition>Whether or not an individual fish's adipose fin was clipped. Levels = c(TRUE, FALSE). If TRUE, the adipose fin was clipped; if FALSE, the adipose fin was either intact or unidentified.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Whether or not an individual fish's adipose fin was clipped. Levels = c(TRUE, FALSE). If TRUE, the adipose fin was clipped; if FALSE, the adipose fin was either intact or unidentified.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+      <numberOfRecords>37250</numberOfRecords>
     </dataTable>
   </dataset>
   <additionalMetadata>
