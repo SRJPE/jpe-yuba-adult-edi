@@ -688,6 +688,26 @@
       </attributeList>
       <numberOfRecords>37250</numberOfRecords>
     </dataTable>
+    <otherEntity>
+      <entityName>Poxon_and_Bratovich_2020.pdf</entityName>
+      <entityDescription>Methods for Lower Yuba River Chinook Salmon Passage and Run Differentiation Analyses</entityDescription>
+      <physical>
+        <objectName>Poxon_and_Bratovich_2020.pdf</objectName>
+        <size unit="bytes">14</size>
+        <authentication method="MD5">3be7b8b182ccd96e48989b4e57311193</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>PDF</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://raw.githubusercontent.com/FlowWest/edi-battle-clear-rst/main/data-raw/metadata/Poxon_and_Bratovich_2020.pdf</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>PDF</entityType>
+    </otherEntity>
   </dataset>
   <additionalMetadata>
     <metadata>
