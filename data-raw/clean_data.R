@@ -57,17 +57,26 @@ instant <- instant_raw |>
   select(-category) |>
   glimpse()
 
+# TODO e-mail methods, abstract and schedule follow up
 daily_uncorrected <- daily_uncorrected_raw |>
   janitor::clean_names() |>
-  relocate(north_ladder_vaki_operation, .before = south_ladder_vaki_operation) |>
-  pivot_longer(uncorrected_north_net_upstream_count_all_chinook:uncorrected_south_net_upstream_count_ad_clip_chinook,
+  mutate(uncorrected_north_net_upstream_count_no_ad_clip = uncorrected_north_net_upstream_count_all_chinook -
+           uncorrected_north_net_upstream_count_ad_clip_chinook,
+         uncorrected_south_net_upstream_count_no_ad_clip = uncorrected_south_net_upstream_count_all_chinook -
+           uncorrected_south_net_upstream_count_ad_clip_chinook) |>
+  select(date, biological_year, uncorrected_north_net_upstream_count_ad_clip_chinook,
+         uncorrected_north_net_upstream_count_no_ad_clip, uncorrected_south_net_upstream_count_ad_clip_chinook,
+         uncorrected_south_net_upstream_count_no_ad_clip, north_ladder_vaki_operation,
+         south_ladder_vaki_operation) |>
+  pivot_longer(uncorrected_north_net_upstream_count_ad_clip_chinook:uncorrected_south_net_upstream_count_no_ad_clip,
                values_to = "count",
                names_to = "count_type") |>
   mutate(date = as.Date(date),
          ladder = ifelse(str_detect(count_type, "north"), "north", "south"),
-         count_type = ifelse(str_detect(count_type, "ad_clip"), "adipose clipped fish", "total fish"),
+         adipose_clipped = ifelse(str_detect(count_type, "no_ad_clip"), FALSE, TRUE),
+         #count_type = ifelse(str_detect(count_type, "ad_clip"), "adipose clipped fish", "total fish"),
          vaki_operation = ifelse(ladder == "north", north_ladder_vaki_operation, south_ladder_vaki_operation)) |>
-  select(date, biological_year, ladder, count, count_type, vaki_operation) |>
+  select(date, biological_year, ladder, count, adipose_clipped, vaki_operation) |>
   glimpse()
 
 daily_corrected <- daily_corrected_raw |>
