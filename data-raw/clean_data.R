@@ -57,7 +57,6 @@ instant <- instant_raw |>
   select(-category) |>
   glimpse()
 
-# TODO e-mail methods, abstract and schedule follow up
 daily_uncorrected <- daily_uncorrected_raw |>
   janitor::clean_names() |>
   mutate(uncorrected_north_net_upstream_count_no_ad_clip = uncorrected_north_net_upstream_count_all_chinook -

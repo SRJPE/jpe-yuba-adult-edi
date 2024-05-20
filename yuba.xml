@@ -41,14 +41,14 @@
     </associatedParty>
     <associatedParty>
       <individualName>
-        <givenName>Jaso</givenName>
+        <givenName>Jason</givenName>
         <surName>Kindopp</surName>
       </individualName>
       <organizationName>California Department of Water Resources</organizationName>
       <electronicMailAddress>jason.kindopp@water.ca.gov</electronicMailAddress>
       <role>associate</role>
     </associatedParty>
-    <pubDate>2024-05-05</pubDate>
+    <pubDate>2024-05-20</pubDate>
     <abstract>
       <para>
     Adult salmonid data on the Yuba River is collected and managed by
@@ -547,14 +547,14 @@
           </measurementScale>
         </attribute>
         <attribute>
-          <attributeName>count_type</attributeName>
+          <attributeName>adipose_clipped</attributeName>
           <attributeLabel>yuba_daily_uncorrected_passage</attributeLabel>
-          <attributeDefinition>Type of count. Levels = c("total fish", "adipose clipped fish"). "Total fish" includes adipose fin intact, adipose fin clipped, and adipose fin unidentified passing through the associated ladder; "adipose fin clipped fish" only includes fish with adipose fin clipped.</attributeDefinition>
+          <attributeDefinition>Whether or not the fish observed had a clipped adipose fin. Levels = c(TRUE, FALSE). If FALSE includes adipose fin intact and adipose fin unidentified; TRUE includes fish with adipose fin clipped.</attributeDefinition>
           <measurementScale>
             <nominal>
               <nonNumericDomain>
                 <textDomain>
-                  <definition>Type of count. Levels = c("total fish", "adipose clipped fish"). "Total fish" includes adipose fin intact, adipose fin clipped, and adipose fin unidentified passing through the associated ladder; "adipose fin clipped fish" only includes fish with adipose fin clipped.</definition>
+                  <definition>Whether or not the fish observed had a clipped adipose fin. Levels = c(TRUE, FALSE). If FALSE includes adipose fin intact and adipose fin unidentified; TRUE includes fish with adipose fin clipped.</definition>
                 </textDomain>
               </nonNumericDomain>
             </nominal>

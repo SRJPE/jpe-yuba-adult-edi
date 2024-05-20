@@ -4,6 +4,8 @@ library(EMLaide)
 library(readxl)
 library(EML)
 
+# TODO attach Poxon and Bratovich (2020) pdf
+
 datatable_metadata <-
   dplyr::tibble(filepath = c("data/yuba_instantaneous_passage.csv",
                              "data/yuba_daily_uncorrected_passage.csv",
