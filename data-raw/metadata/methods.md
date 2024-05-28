@@ -2,6 +2,7 @@
 Upstream passage
 
 # Adult Upstream
+
 *Objective:* Estimate spring-run spawning population
 
 *Type:* VAKi Riverwatcher
@@ -13,6 +14,7 @@ Upstream passage
 Yuba River operates a video monitoring system near Daguerre Dam with two ladders (North and South). This dataset is considered to be a census for spring run chinook because mostly all spawn upstream of Daguerre Dam. Passage estimates using the adult upstream data have been modeled for 2004 – 2022. The modeling approach involves determining the run and interpolating for missing data. 
 
 *Data tables*
+
 Data is available in tables following sequential QA/QC processes and modeling:
 
 Instantaneous passage records: data in this file form the base dataset for analyses and methodologies identified in Poxon and Bratovich (2020).
@@ -25,7 +27,8 @@ Run differentiation is performed by splitting the dataset into three components 
 
 The 2016 and 2017 annual time series were deemed inappropriate for count correction and run separation analyses due to long periods of VAKI Riverwatcher™ system outages that resulted in incomplete datasets for both years. No estimates (run-differentiated or overall) are possible for these years. The total number of Chinook salmon for these years represent raw counts as affected by VAKI Riverwatcher™ system outages, and do not represent estimated annual abundances. 
 
-Additionally, run-type differentiation was not possible for biological year 2019 due to an extended closure (February 13, 2019 through September 10, 2019) of the DPD North Ladder, which fundamentally altered the temporal patterns of passage at DPD on which the run differentiation analysis is based. As a result, the only possible annual abundance estimate for the 2019 annual time series is Total Chinook Salmon.
+Additionally, run-type differentiation was not possible for biological year 2019 due to an extended closure (February 13, 2019 through September 10, 2019) of the DPD North Ladder, which fundamentally altered the temporal patterns of passage at DPD on which the run differentiation analysis is based. As a result, the only possible annual abundance estimate for the 2019 annual time series is Total Chinook Salmon. Further analyses that took place due to the 2019 closure are further detailed in the appendix attached to the package [insert title]. 
 
-*Works cited*
+*Resources*
+
 Poxon, B. and Bratovich, P. 2020. Lower Yuba River Vaki Riverwatcher Chinook Salmon Passage and Run Differentiation Analyses. Prepared by HDR for Yuba Water Agency.
