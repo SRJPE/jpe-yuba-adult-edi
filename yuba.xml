@@ -48,7 +48,7 @@
       <electronicMailAddress>jason.kindopp@water.ca.gov</electronicMailAddress>
       <role>associate</role>
     </associatedParty>
-    <pubDate>2024-05-20</pubDate>
+    <pubDate>2024-05-28</pubDate>
     <abstract>
       <para>
     Adult salmonid data on the Yuba River is collected and managed by
@@ -98,7 +98,7 @@
             <calendarDate>2004-03-01</calendarDate>
           </beginDate>
           <endDate>
-            <calendarDate>2023-12-28</calendarDate>
+            <calendarDate>2023-02-28</calendarDate>
           </endDate>
         </rangeOfDates>
       </temporalCoverage>
@@ -209,8 +209,12 @@
       approach involves determining the run and interpolating for
       missing data.
     </para>
-            <para><emphasis>Data tables</emphasis> Data is available in tables
-      following sequential QA/QC processes and modeling:
+            <para>
+              <emphasis>Data tables</emphasis>
+            </para>
+            <para>
+      Data is available in tables following sequential QA/QC processes
+      and modeling:
     </para>
             <para>
       Instantaneous passage records: data in this file form the base
@@ -263,11 +267,17 @@
       fundamentally altered the temporal patterns of passage at DPD on
       which the run differentiation analysis is based. As a result, the
       only possible annual abundance estimate for the 2019 annual time
-      series is Total Chinook Salmon.
+      series is Total Chinook Salmon. Further analyses that took place
+      due to the 2019 closure are further detailed in the appendix
+      attached to the package [insert title].
     </para>
-            <para><emphasis>Works cited</emphasis> Poxon, B. and Bratovich, P. 2020.
-      Lower Yuba River Vaki Riverwatcher Chinook Salmon Passage and Run
-      Differentiation Analyses. Prepared by HDR for Yuba Water Agency.
+            <para>
+              <emphasis>Resources</emphasis>
+            </para>
+            <para>
+      Poxon, B. and Bratovich, P. 2020. Lower Yuba River Vaki
+      Riverwatcher Chinook Salmon Passage and Run Differentiation
+      Analyses. Prepared by HDR for Yuba Water Agency.
     </para>
           </section>
         </description>
@@ -312,7 +322,7 @@
         <attribute>
           <attributeName>date</attributeName>
           <attributeLabel>yuba_instantaneous_passage</attributeLabel>
-          <attributeDefinition>Date steamp of fish passage event.</attributeDefinition>
+          <attributeDefinition>Date stamp of fish passage event.</attributeDefinition>
           <measurementScale>
             <dateTime>
               <formatString>YYYY-MM-DD</formatString>
