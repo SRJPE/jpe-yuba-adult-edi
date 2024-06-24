@@ -26,6 +26,10 @@ instant_raw <- readxl::read_xlsx(here::here("data-raw", "yuba_instantaneous.xlsx
 instant_metadata <- readxl::read_xlsx(here::here("data-raw", "yuba_instantaneous.xlsx"),
                                       sheet = "Metadata",
                                       skip = 7)
+# summary of the original data
+# 107557 obs
+min(instant_raw$Date) # 2004-03-08
+max(instant_raw$Date) # 2022-12-28
 
 daily_uncorrected_raw <- readxl::read_xlsx(here::here("data-raw", "yuba_uncorrected_daily.xlsx"),
                                            sheet = "Uncorr CHN net upstream")
@@ -33,13 +37,55 @@ daily_uncorrected_metadata <- readxl::read_xlsx(here::here("data-raw", "yuba_unc
                                                 sheet = "Metadata",
                                                 skip = 7)
 
+# summary of original data
+# 6939 obs
+min(daily_uncorrected_raw$Date) # 2004-03-01
+max(daily_uncorrected_raw$Date) # 2023-2-28
+min(daily_uncorrected_raw$`UNCORRECTED North Net Upstream Count Ad-Clip Chinook`) # 0
+max(daily_uncorrected_raw$`UNCORRECTED North Net Upstream Count Ad-Clip Chinook`) # 303
+filter(daily_uncorrected_raw, is.na(`UNCORRECTED North Net Upstream Count Ad-Clip Chinook`)) # no NAs
+min(daily_uncorrected_raw$`UNCORRECTED North Net Upstream Count All Chinook`) # 0
+max(daily_uncorrected_raw$`UNCORRECTED North Net Upstream Count All Chinook`) # 539
+filter(daily_uncorrected_raw, is.na(`UNCORRECTED North Net Upstream Count All Chinook`)) # no NAs
+min(daily_uncorrected_raw$`UNCORRECTED South Net Upstream Count Ad-Clip Chinook`) # 0
+max(daily_uncorrected_raw$`UNCORRECTED South Net Upstream Count Ad-Clip Chinook`) # 66
+filter(daily_uncorrected_raw, is.na(`UNCORRECTED South Net Upstream Count Ad-Clip Chinook`)) # no NAs
+min(daily_uncorrected_raw$`UNCORRECTED South Net Upstream Count All Chinook`) # 0
+max(daily_uncorrected_raw$`UNCORRECTED South Net Upstream Count All Chinook`) # 229
+min(daily_uncorrected_raw$`North Ladder VAKI Operation`) # 0
+max(daily_uncorrected_raw$`North Ladder VAKI Operation`) # 1
+min(daily_uncorrected_raw$`South Ladder VAKI Operation`) # 0
+max(daily_uncorrected_raw$`South Ladder VAKI Operation`) # 1
+
 daily_corrected_raw <- readxl::read_xlsx(here::here("data-raw", "yuba_corrected_daily.xlsx"),
                                          sheet = "YubaCorrected&RunDiffChinook")
 daily_corrected_metadata <- readxl::read_xlsx(here::here("data-raw", "yuba_corrected_daily.xlsx"),
                                                 sheet = "Metadata",
                                                 skip = 7)
+# summary of original data
+# 6939 obs
+min(daily_corrected_raw$Date) # 2004-03-01
+max(daily_corrected_raw$Date) # 2023-2-28
+min(daily_corrected_raw$SpringEarly.AllChinook, na.rm = T) # 0
+max(daily_corrected_raw$SpringEarly.AllChinook, na.rm = T) # 542
+filter(daily_corrected_raw, is.na(SpringEarly.AllChinook)) #1096 NAs
+min(daily_corrected_raw$SpringLate.AllChinook, na.rm = T) # 0
+max(daily_corrected_raw$SpringLate.AllChinook, na.rm = T) # 489
+filter(daily_corrected_raw, is.na(SpringLate.AllChinook)) #1096 NAs
+min(daily_corrected_raw$Fall.AllChinook, na.rm = T) # 0
+max(daily_corrected_raw$Fall.AllChinook, na.rm = T) # 556
+filter(daily_corrected_raw, is.na(Fall.AllChinook)) #1096 NAs
+min(daily_corrected_raw$SpringEarly.AdClipChinook, na.rm = T) # 0
+max(daily_corrected_raw$SpringEarly.AdClipChinook, na.rm = T) # 305
+min(daily_corrected_raw$SpringLate.AdClipChinook, na.rm = T) # 0
+max(daily_corrected_raw$SpringLate.AdClipChinook, na.rm = T) # 72
+min(daily_corrected_raw$Fall.AdClipChinook, na.rm = T) # 0
+max(daily_corrected_raw$Fall.AdClipChinook, na.rm = T) # 101
+min(daily_corrected_raw$Total.AllChinook)
+max(daily_corrected_raw$Total.AllChinook) # 556
 
 # clean data --------------------------------------------------------------
+# results in same number of observations
 instant <- instant_raw |>
   janitor::clean_names() |>
   mutate(date = as.Date(date),
@@ -108,6 +154,13 @@ daily_corrected <- daily_corrected_raw |>
          adipose_clipped = ifelse(str_detect(count_type, "no_ad_clip"), FALSE, TRUE)) |>
   select(-count_type) |>
   glimpse()
+
+# There are some situations where all chinook is less than adclip
+qc_check <- daily_corrected_raw |>
+  mutate(late_spring = SpringLate.AllChinook - SpringLate.AdClipChinook,
+         early_spring = SpringEarly.AllChinook - SpringEarly.AdClipChinook,
+         fall = Fall.AllChinook - Fall.AdClipChinook) |>
+  filter(late_spring < 0 | early_spring < 0 | fall < 0)
 
 # write files -------------------------------------------------------------
 write.csv(instant, here::here("data", "yuba_instantaneous_passage.csv"), row.names = FALSE)
