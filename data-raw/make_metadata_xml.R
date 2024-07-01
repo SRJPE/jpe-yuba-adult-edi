@@ -20,11 +20,17 @@ datatable_metadata <-
                                          "yuba_daily_corrected_passage.csv")))
 
 # attach Poxon and Bratovich (2020) pdf
-other_entity_metadata <- list("file_name" = "Poxon_and_Bratovich_2020.pdf",
-                              "file_description" = "Methods for Lower Yuba River Chinook Salmon Passage and Run Differentiation Analyses",
-                              "file_type" = "PDF",
+other_entity_metadata <- list("file_name" = c("Poxon_and_Bratovich_2020.pdf",
+                                              "Poxon_and_Bratovich_2023_LYR_Chinook_Passage_and_Run_Differentiation_Update_Summary_Table.pdf"),
+                              "file_description" = c("Methods for Lower Yuba River Chinook Salmon Passage and Run Differentiation Analyses",
+                                                     "Summary Table of Results for Lower Yuba River VAKI Riverwatcher™ Chinook Salmon Passage and Run Differentiation Analyses for Biological Years 2004-2022"),
+                              "file_type" = c("PDF",
+                                              "PDF"),
                               "physical" = create_physical("data-raw/metadata/Poxon_and_Bratovich_2020.pdf",
-                                                           data_url = "https://raw.githubusercontent.com/FlowWest/edi-battle-clear-rst/main/data-raw/metadata/Poxon_and_Bratovich_2020.pdf"))
+                                                           data_url = "https://raw.githubusercontent.com/FlowWest/edi-battle-clear-rst/main/data-raw/metadata/Poxon_and_Bratovich_2020.pdf"),
+                              create_physical("data-raw/metadata/Poxon_and_Bratovich_2023_LYR_Chinook_Passage_and_Run_Differentiation_Update_Summary_Table.pdf",
+                                              data_url = "https://raw.githubusercontent.com/FlowWest/edi-battle-clear-rst/main/data-raw/metadata/Poxon_and_Bratovich_2023_LYR_Chinook_Passage_and_Run_Differentiation_Update_Summary_Table.pdf")
+)
 other_entity_metadata$physical$dataFormat <- list("externallyDefinedFormat" = list("formatName" = "PDF"))
 
 

@@ -16,7 +16,7 @@ gcs_get_object(object_name = "adult-upstream-passage-monitoring/yuba-river/data-
                saveToDisk = here::here("data-raw", "yuba_uncorrected_daily.xlsx"),
                overwrite = TRUE)
 
-gcs_get_object(object_name = "adult-upstream-passage-monitoring/yuba-river/data-raw/Yuba VAKI Chinook_Corrected & Run Differentiated Daily Passage Estimates.xlsx",
+gcs_get_object(object_name = "adult-upstream-passage-monitoring/yuba-river/data-raw/Yuba_VAKI_Chinook_Corrected_Run_Differentiated_Daily_Passage_Estimates_v2.xlsx",
                bucket = gcs_get_global_bucket(),
                saveToDisk = here::here("data-raw", "yuba_corrected_daily.xlsx"),
                overwrite = TRUE)
@@ -81,7 +81,7 @@ min(daily_corrected_raw$SpringLate.AdClipChinook, na.rm = T) # 0
 max(daily_corrected_raw$SpringLate.AdClipChinook, na.rm = T) # 72
 min(daily_corrected_raw$Fall.AdClipChinook, na.rm = T) # 0
 max(daily_corrected_raw$Fall.AdClipChinook, na.rm = T) # 101
-min(daily_corrected_raw$Total.AllChinook)
+min(daily_corrected_raw$Total.AllChinook) # 0
 max(daily_corrected_raw$Total.AllChinook) # 556
 
 # clean data --------------------------------------------------------------
@@ -162,14 +162,25 @@ qc_check <- daily_corrected_raw |>
          fall = Fall.AllChinook - Fall.AdClipChinook) |>
   filter(late_spring < 0 | early_spring < 0 | fall < 0)
 
+# check to make sure update matches with brian's excel he sent
+filter(daily_corrected, date == as.Date("2005-07-22"))
+ck <- filter(daily_corrected_raw, Date == as.Date("2005-07-22"))
+filter(daily_corrected, date == as.Date("2010-08-18"))
+filter(daily_corrected, date == as.Date("2010-08-20"))
+filter(daily_corrected, date == as.Date("2014-08-02"))
+filter(daily_corrected, date == as.Date("2018-07-31"))
+filter(daily_corrected, date == as.Date("2018-08-22"))
+filter(daily_corrected, date == as.Date("2018-09-04"))
+filter(daily_corrected, date == as.Date("2018-09-24"))
+filter(daily_corrected, date == as.Date("2021-05-08"))
 # write files -------------------------------------------------------------
-write.csv(instant, here::here("data", "yuba_instantaneous_passage.csv"), row.names = FALSE)
-write.csv(daily_uncorrected, here::here("data", "yuba_daily_uncorrected_passage.csv"), row.names = FALSE)
-write.csv(daily_corrected, here::here("data", "yuba_daily_corrected_passage.csv"), row.names = FALSE)
+write_csv(instant, here::here("data", "yuba_instantaneous_passage.csv"))
+write_csv(daily_uncorrected, here::here("data", "yuba_daily_uncorrected_passage.csv"))
+write_csv(daily_corrected, here::here("data", "yuba_daily_corrected_passage.csv"))
 
 # review ------------------------------------------------------------------
-read.csv(here::here("data", "yuba_instantaneous_passage.csv")) |> glimpse()
-read.csv(here::here("data", "yuba_daily_uncorrected_passage.csv")) |> glimpse()
-read.csv(here::here("data", "yuba_daily_corrected_passage.csv")) |> glimpse()
+read_csv(here::here("data", "yuba_instantaneous_passage.csv")) |> glimpse()
+read_csv(here::here("data", "yuba_daily_uncorrected_passage.csv")) |> glimpse()
+read_csv(here::here("data", "yuba_daily_corrected_passage.csv")) |> glimpse()
 
 
