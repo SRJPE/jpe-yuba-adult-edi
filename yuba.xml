@@ -544,20 +544,6 @@
           </measurementScale>
         </attribute>
         <attribute>
-          <attributeName>run</attributeName>
-          <attributeLabel>carcass</attributeLabel>
-          <attributeDefinition>Run of carcass observed.</attributeDefinition>
-          <measurementScale>
-            <nominal>
-              <nonNumericDomain>
-                <textDomain>
-                  <definition>Run of carcass observed.</definition>
-                </textDomain>
-              </nonNumericDomain>
-            </nominal>
-          </measurementScale>
-        </attribute>
-        <attribute>
           <attributeName>count</attributeName>
           <attributeLabel>yuba_daily_uncorrected_passage</attributeLabel>
           <attributeDefinition>Daily net upstream count of fish, uncorrected for periods of VAKI Riverwatcher non-operation.</attributeDefinition>
