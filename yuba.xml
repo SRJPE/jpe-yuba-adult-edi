@@ -48,7 +48,7 @@
       <electronicMailAddress>jason.kindopp@water.ca.gov</electronicMailAddress>
       <role>associate</role>
     </associatedParty>
-    <pubDate>2024-07-01</pubDate>
+    <pubDate>2024-07-08</pubDate>
     <abstract>
       <para>
     Adult salmonid data on the Yuba River is collected and managed by
@@ -666,7 +666,7 @@
               <numericDomain>
                 <numberType>integer</numberType>
                 <bounds>
-                  <minimum exclusive="false">-1</minimum>
+                  <minimum exclusive="false">0</minimum>
                   <maximum exclusive="false">538</maximum>
                 </bounds>
               </numericDomain>
