@@ -5,19 +5,34 @@ library(readxl)
 library(EML)
 
 datatable_metadata <-
-  dplyr::tibble(filepath = c("data/yuba_redd.csv",
-                             "data/yuba_escapement_estimates.csv",
-                             "data/yuba_carcass.csv"),
-                attribute_info = c("data-raw/metadata/yuba_redd_metadata.xlsx",
-                                   "data-raw/metadata/yuba_escapement_estimates_metadata.xlsx",
-                                   "data-raw/metadata/yuba_carcass_metadata.xlsx"),
-                datatable_description = c("Daily redd survey data",
-                                          "Daily upstream passage data",
-                                          "Daily carcass data"),
+  dplyr::tibble(filepath = c("data/yuba_instantaneous_passage.csv",
+                             "data/yuba_daily_uncorrected_passage.csv",
+                             "data/yuba_daily_corrected_passage.csv"),
+                attribute_info = c("data-raw/metadata/yuba_instantaneous_passage.xlsx",
+                                   "data-raw/metadata/yuba_daily_uncorrected_passage.xlsx",
+                                   "data-raw/metadata/yuba_daily_corrected_passage.xlsx"),
+                datatable_description = c("Instantaneous passage records - not to be used for modeling or analysis",
+                                          "Uncorrected daily net passage counts - not to be used for modeling or analysis",
+                                          "Corrected and run differentiated daily passage counts"),
                 datatable_url = paste0("https://raw.githubusercontent.com/SRJPE/jpe-yuba-edi/main/data/",
-                                       c("yuba_redd.csv",
-                                         "yuba_escapement_estimates.csv",
-                                         "yuba_carcass.csv")))
+                                       c("yuba_instantaneous_passage.csv",
+                                         "yuba_daily_uncorrected_passage.csv",
+                                         "yuba_daily_corrected_passage.csv")))
+
+# attach Poxon and Bratovich (2020) pdf
+other_entity_metadata <- list("file_name" = c("Poxon_and_Bratovich_2020.pdf",
+                                              "Poxon_and_Bratovich_2023_LYR_Chinook_Passage_and_Run_Differentiation_Update_Summary_Table.pdf"),
+                              "file_description" = c("Methods for Lower Yuba River Chinook Salmon Passage and Run Differentiation Analyses",
+                                                     "Summary Table of Results for Lower Yuba River VAKI Riverwatcher™ Chinook Salmon Passage and Run Differentiation Analyses for Biological Years 2004-2022"),
+                              "file_type" = c("PDF",
+                                              "PDF"),
+                              "physical" = create_physical("data-raw/metadata/Poxon_and_Bratovich_2020.pdf",
+                                                           data_url = "https://raw.githubusercontent.com/FlowWest/edi-battle-clear-rst/main/data-raw/metadata/Poxon_and_Bratovich_2020.pdf"),
+                              create_physical("data-raw/metadata/Poxon_and_Bratovich_2023_LYR_Chinook_Passage_and_Run_Differentiation_Update_Summary_Table.pdf",
+                                              data_url = "https://raw.githubusercontent.com/FlowWest/edi-battle-clear-rst/main/data-raw/metadata/Poxon_and_Bratovich_2023_LYR_Chinook_Passage_and_Run_Differentiation_Update_Summary_Table.pdf")
+)
+other_entity_metadata$physical$dataFormat <- list("externallyDefinedFormat" = list("formatName" = "PDF"))
+
 # save cleaned data to `data/`
 excel_path <- "data-raw/metadata/yuba_adult_metadata.xlsx"
 sheets <- readxl::excel_sheets(excel_path)
@@ -25,30 +40,32 @@ metadata <- lapply(sheets, function(x) readxl::read_excel(excel_path, sheet = x)
 names(metadata) <- sheets
 
 abstract_docx <- "data-raw/metadata/abstract.docx"
-methods_docx <- "data-raw/metadata/methods.docx"
+# methods_docx <- "data-raw/metadata/methods.docx"
+methods_md <- "data-raw/metadata/methods.md"
 
 #edi_number <- reserve_edi_id(user_id = Sys.getenv("EDI_USER_ID"), password = Sys.getenv("EDI_PASSWORD"))
 edi_number <- "yuba"
 
-dataset <- list() %>%
-  add_pub_date() %>%
-  add_title(metadata$title) %>%
-  add_personnel(metadata$personnel) %>%
-  add_keyword_set(metadata$keyword_set) %>%
-  add_abstract(abstract_docx) %>%
-  add_license(metadata$license) %>%
-  add_method(methods_docx) %>%
-  add_maintenance(metadata$maintenance) %>%
-  add_project(metadata$funding) %>%
-  add_coverage(metadata$coverage, metadata$taxonomic_coverage) %>%
-  add_datatable(datatable_metadata)
+dataset <- list() |>
+  add_pub_date() |>
+  add_title(metadata$title) |>
+  add_personnel(metadata$personnel) |>
+  add_keyword_set(metadata$keyword_set) |>
+  add_abstract(abstract_docx) |>
+  add_license(metadata$license) |>
+  add_method(methods_md) |>
+  add_maintenance(metadata$maintenance) |>
+  add_project(metadata$funding) |>
+  add_coverage(metadata$coverage, metadata$taxonomic_coverage) |>
+  add_datatable(datatable_metadata) |>
+  add_other_entity(other_entity_metadata)
 
 # GO through and check on all units
-custom_units <- data.frame(id = c("count of fish", "count of redds"),
+custom_units <- data.frame(id = c("count of fish", "proportion"),
                            unitType = c("dimensionless", "dimensionless"),
                            parentSI = c(NA, NA),
                            multiplierToSI = c(NA, NA),
-                           description = c("number of fish counted", "number of redds counted"))
+                           description = c("number of fish counted", "proportion of day operational"))
 
 
 unitList <- EML::set_unitList(custom_units)
