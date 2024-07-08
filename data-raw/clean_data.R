@@ -37,6 +37,7 @@ daily_uncorrected_metadata <- readxl::read_xlsx(here::here("data-raw", "yuba_unc
                                                 sheet = "Metadata",
                                                 skip = 7)
 
+
 # summary of original data
 # 6939 obs
 min(daily_uncorrected_raw$Date) # 2004-03-01
@@ -182,5 +183,6 @@ write_csv(daily_corrected, here::here("data", "yuba_daily_corrected_passage.csv"
 read_csv(here::here("data", "yuba_instantaneous_passage.csv")) |> glimpse()
 read_csv(here::here("data", "yuba_daily_uncorrected_passage.csv")) |> glimpse()
 read_csv(here::here("data", "yuba_daily_corrected_passage.csv")) |> glimpse()
+
 
 

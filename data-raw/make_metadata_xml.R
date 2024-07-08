@@ -33,7 +33,6 @@ other_entity_metadata <- list("file_name" = c("Poxon_and_Bratovich_2020.pdf",
 )
 other_entity_metadata$physical$dataFormat <- list("externallyDefinedFormat" = list("formatName" = "PDF"))
 
-
 # save cleaned data to `data/`
 excel_path <- "data-raw/metadata/yuba_adult_metadata.xlsx"
 sheets <- readxl::excel_sheets(excel_path)
