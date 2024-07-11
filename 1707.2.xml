@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" packageId="edi.1707.1" system="EDI" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd">
+  <access authSystem="https://pasta.edirepository.org/authentication" order="allowFirst" scope="document">
+    <allow>
+      <principal>public</principal>
+      <permission>read</permission>
+    </allow>
+    <allow>
+      <principal>cvpia</principal>
+      <permission>write</permission>
+    </allow>
+  </access>
+  <dataset>
+    <shortName>Yuba River Chinook Upstream Passage</shortName>
+    <title>Monitoring adult Chinook salmon upstream passage on Yuba River</title>
+    <creator>
+      <individualName>
+        <givenName>Jacob</givenName>
+        <surName>Vander Meulen</surName>
+      </individualName>
+      <organizationName>Yuba Water Agency</organizationName>
+      <electronicMailAddress>JVanderMeulen@yubawater.org</electronicMailAddress>
+    </creator>
+    <associatedParty>
+      <individualName>
+        <givenName>Brian</givenName>
+        <surName>Poxon</surName>
+      </individualName>
+      <organizationName>HDR, Inc.</organizationName>
+      <electronicMailAddress>Brian.Poxon@hdrinc.com</electronicMailAddress>
+      <role>principal investigator</role>
+    </associatedParty>
+    <associatedParty>
+      <individualName>
+        <givenName>Casey</givenName>
+        <surName>Campos</surName>
+      </individualName>
+      <organizationName>California Department of Water Resources</organizationName>
+      <electronicMailAddress>Casey.Campos@water.ca.gov</electronicMailAddress>
+      <role>associate</role>
+    </associatedParty>
+    <associatedParty>
+      <individualName>
+        <givenName>Jason</givenName>
+        <surName>Kindopp</surName>
+      </individualName>
+      <organizationName>California Department of Water Resources</organizationName>
+      <electronicMailAddress>jason.kindopp@water.ca.gov</electronicMailAddress>
+      <role>associate</role>
+    </associatedParty>
+    <pubDate>2024-07-11</pubDate>
+    <abstract>
+      <para>
+    Adult salmonid data on the Yuba River is collected and managed by
+    the Yuba Water Agency and the California Department of Water
+    Resources. Upstream passage data is collected year-round at Daguerre
+    Point Dam, 24 hours a day and 7 days a week. Data from this
+    monitoring is modeled by Brian Poxon and Paul Bratovich to produce
+    estimates of adult escapement (upstream passage) abundance. These
+    data will also be used to inform the development of a juvenile
+    production estimate (JPE) for spring-run Chinook salmon in the
+    Sacramento River Watershed.
+  </para>
+    </abstract>
+    <keywordSet>
+      <keyword>spring run</keyword>
+      <keyword>juvenile production estimate</keyword>
+      <keyword>Oncorhynchus tshawytscha</keyword>
+      <keyword>California</keyword>
+      <keyword>Central Valley</keyword>
+      <keyword>SRJPE</keyword>
+      <keyword>Chinook salmon</keyword>
+      <keyword>VAKI Riverwatcher</keyword>
+      <keyword>Escapement</keyword>
+      <keyword>Upstream Passage</keyword>
+    </keywordSet>
+    <intellectualRights>
+      <para>This information is released under the Creative Commons license - Attribution - CC BY (https://creativecommons.org/licenses/by/4.0/). The consumer of these data ("Data User" herein) is required to cite it appropriately in any publication that results from its use. The Data User should realize that these data may be actively used by others for ongoing research and that coordination may be necessary to prevent duplicate publication. The Data User is urged to contact the authors of these data if any questions about methodology or results occur. Where appropriate, the Data User is encouraged to consider collaboration or co-authorship with the authors. The Data User should realize that misinterpretation of data may occur if used out of context of the original study. While substantial efforts are made to ensure the accuracy of data and associated documentation, complete accuracy of data sets cannot be guaranteed. All data are made available "as is." The Data User should be aware, however, that data are updated periodically and it is the responsibility of the Data User to check for new versions of the data. The data authors and the repository where these data were obtained shall not be liable for damages resulting from any use or misinterpretation of the data. Thank you.</para>
+    </intellectualRights>
+    <licensed>
+      <licenseName>Creative Commons Attribution 4.0 International</licenseName>
+      <url>https://spdx.org/licenses/CC-BY-4.0.html</url>
+      <identifier>CC-BY-4.0</identifier>
+    </licensed>
+    <coverage>
+      <geographicCoverage>
+        <geographicDescription>Yuba River Chinook Upstream Passage</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-121.5136</westBoundingCoordinate>
+          <eastBoundingCoordinate>-121.4039</eastBoundingCoordinate>
+          <northBoundingCoordinate>39.217</northBoundingCoordinate>
+          <southBoundingCoordinate>39.1735</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <temporalCoverage>
+        <rangeOfDates>
+          <beginDate>
+            <calendarDate>2004-03-01</calendarDate>
+          </beginDate>
+          <endDate>
+            <calendarDate>2023-02-28</calendarDate>
+          </endDate>
+        </rangeOfDates>
+      </temporalCoverage>
+      <taxonomicCoverage>
+        <taxonomicClassification>
+          <taxonRankName>kingdom</taxonRankName>
+          <taxonRankValue>Animalia</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>phylum</taxonRankName>
+            <taxonRankValue>Chordata</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>class</taxonRankName>
+              <taxonRankValue>Teleostei</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>order</taxonRankName>
+                <taxonRankValue>Salmoniformes</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>family</taxonRankName>
+                  <taxonRankValue>Salmonidae</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>genus</taxonRankName>
+                    <taxonRankValue>Oncorhynchus</taxonRankValue>
+                    <taxonomicClassification>
+                      <taxonRankName>species</taxonRankName>
+                      <taxonRankValue>Oncorhynchus tshawytscha</taxonRankValue>
+                      <commonName>Chinook Salmon</commonName>
+                      <taxonId provider="https://itis.gov">161980</taxonId>
+                    </taxonomicClassification>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+      </taxonomicCoverage>
+      <taxonomicCoverage>
+        <taxonomicClassification>
+          <taxonRankName>kingdom</taxonRankName>
+          <taxonRankValue>Animalia</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>phylum</taxonRankName>
+            <taxonRankValue>Chordata</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>class</taxonRankName>
+              <taxonRankValue>Teleostei</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>order</taxonRankName>
+                <taxonRankValue>Salmoniformes</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>family</taxonRankName>
+                  <taxonRankValue>Salmonidae</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>genus</taxonRankName>
+                    <taxonRankValue>Oncorhynchus</taxonRankValue>
+                    <taxonomicClassification>
+                      <taxonRankName>species</taxonRankName>
+                      <taxonRankValue>Oncorhynchus mykiss</taxonRankValue>
+                      <commonName>Steelhead Trout</commonName>
+                      <taxonId provider="https://itis.gov">161989</taxonId>
+                    </taxonomicClassification>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+      </taxonomicCoverage>
+    </coverage>
+    <maintenance>
+      <description>ongoing</description>
+      <maintenanceUpdateFrequency>annually</maintenanceUpdateFrequency>
+    </maintenance>
+    <contact>
+      <individualName>
+        <givenName>Jacob</givenName>
+        <surName>Vander Meulen</surName>
+      </individualName>
+      <organizationName>Yuba Water Agency</organizationName>
+      <electronicMailAddress>JVanderMeulen@yubawater.org</electronicMailAddress>
+    </contact>
+    <methods>
+      <methodStep>
+        <description>
+          <section>
+            <title>Data Types</title>
+            <para>
+      Upstream passage
+    </para>
+          </section>
+          <section>
+            <title>Adult Upstream</title>
+            <para><emphasis>Objective:</emphasis> Estimate spring-run spawning
+      population
+    </para>
+            <para><emphasis>Type:</emphasis> VAKI Riverwatcher
+    </para>
+            <para><emphasis>Location:</emphasis> Daguerre Point Dam
+    </para>
+            <para><emphasis>Times of operation:</emphasis> Year-round
+    </para>
+            <para>
+      In the Yuba River, a VAKI Riverwatcher™ video monitoring system is
+      operated within the two fish ladders (North and South) at Daguerre
+      Point Dam. This dataset is considered to be a census for spring
+      run chinook because mostly all spawn upstream of Daguerre Point
+      Dam. Passage estimates using the adult upstream data have been
+      modeled for 2004 – 2023. The modeling approach involves
+      determining the run and interpolating for missing data.
+    </para>
+            <para>
+      Data is available in tables following sequential QA/QC processes
+      and modeling:
+    </para>
+            <para>
+      Instantaneous passage records: data in this file form the base
+      dataset for analyses and methodologies identified in Poxon and
+      Bratovich (2020). These data are provided for transparency and are
+      not intended to be used for modeling purposes.
+    </para>
+            <para>
+      Uncorrected daily passage: data in this file represent the
+      aggregation of the instantaneous records in instantaneous passage
+      records to net upstream daily passage counts. These data undergo
+      the count correction and run differentiation analyses presented in
+      Poxon &amp; Bratovich (2020). These data are provided for
+      transparency and are not intended to be used for modeling
+      purposes.
+    </para>
+            <para>
+      Corrected and run-differentiated daily passage: data in this file
+      are corrected for VAKI operational outages and contain run
+      differentiated daily net Chinook salmon passage estimates. Data in
+      this file represent the output (results) from the count correction
+      and run differentiation analyses presented in Poxon and Bratovich
+      (2020). Please see below for important notes regarding biological
+      years 2016, 2017, and 2019.
+    </para>
+            <para>
+      Interpolation of missing data (i.e., when the video system was not
+      working) is performed by application of a Generalized Additive
+      Model (GAM). Run differentiation is performed by splitting the
+      dataset into three temporal components (an early component of
+      early migrating spring run, a middle component comprised of late
+      migrating spring run and fall run, and a late component of fall
+      run) and conducting an iterative analysis to find the
+      best-supported ratio of spring run to fall run in the middle
+      component, as outlined in Poxon and Bratovich (2020).
+    </para>
+            <para>
+      The 2016 and 2017 annual time series were deemed inappropriate for
+      count correction and run separation analyses due to long periods
+      of VAKI Riverwatcher™ system outages that resulted in incomplete
+      datasets for both years. No estimates (run-differentiated or
+      overall) are possible for these years. The total number of Chinook
+      salmon for these years represent raw counts as affected by VAKI
+      Riverwatcher™ system outages, and do not represent estimated
+      annual abundances.
+    </para>
+            <para>
+      Additionally, run-type differentiation was not possible for
+      biological year 2019 due to an extended closure (February 13, 2019
+      through September 10, 2019) of the DPD North Ladder, which
+      fundamentally altered the temporal patterns of passage at DPD on
+      which the run differentiation analysis is based. As a result, the
+      only possible annual abundance estimate for the 2019 annual time
+      series is Total Chinook Salmon. Table 1 in Poxon and Bratovich
+      (2020), which did not acknowledge the limitations of 2019 data
+      precluding run differentiation, has been superseded by Table 1 in
+      Poxon and Bratovich (2023). Table 1 in Poxon and Bratovich (2023)
+      is also expanded to include results of count correction and run
+      differentiation analyses for biological years 2020 through 2022.
+    </para>
+          </section>
+          <section>
+            <title>Resources</title>
+            <para>
+      Poxon, B. and Bratovich, P. 2020. Lower Yuba River VAKI
+      Riverwatcher™ Chinook Salmon Passage and Run Differentiation
+      Analyses – 2020 Update. Prepared by HDR for Yuba Water Agency.
+    </para>
+            <para>
+      Poxon, B. and Bratovich, P. 2023. Summary Table of Results for
+      Lower Yuba River VAKI Riverwatcher™ Chinook Salmon Passage and Run
+      Differentiation Analyses for Biological Years 2004-2022. Prepared
+      by HDR for Yuba Water Agency.
+    </para>
+          </section>
+        </description>
+      </methodStep>
+    </methods>
+    <project>
+      <title>Monitoring adult Chinook salmon upstream passage on Yuba River</title>
+      <personnel>
+        <individualName>
+          <givenName>Jacob</givenName>
+          <surName>Vander Meulen</surName>
+        </individualName>
+        <organizationName>Yuba Water Agency</organizationName>
+        <electronicMailAddress>JVanderMeulen@yubawater.org</electronicMailAddress>
+        <role>Project Lead</role>
+      </personnel>
+    </project>
+    <dataTable>
+      <entityName>yuba_instantaneous_passage.csv</entityName>
+      <entityDescription>Instantaneous passage records - not to be used for modeling or analysis</entityDescription>
+      <physical>
+        <objectName>yuba_instantaneous_passage.csv</objectName>
+        <size unit="bytes">5688360</size>
+        <authentication method="MD5">b7cb71eb516ec601c8d6bc89d1c78f34</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-yuba-adult-edi/main/data/yuba_instantaneous_passage.csv</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>date</attributeName>
+          <attributeLabel>yuba_instantaneous_passage</attributeLabel>
+          <attributeDefinition>Date stamp of fish passage event.</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD</formatString>
+              <dateTimeDomain>
+                <bounds>
+                  <minimum exclusive="false">2004-03-08</minimum>
+                  <maximum exclusive="false">2022-12-28</maximum>
+                </bounds>
+              </dateTimeDomain>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>time</attributeName>
+          <attributeLabel>yuba_instantaneous_passage</attributeLabel>
+          <attributeDefinition>Time stamp of fish passage event.</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>H:M:S</formatString>
+              <dateTimeDomain>
+                <bounds>
+                  <minimum exclusive="false">00:00:00</minimum>
+                  <maximum exclusive="false">23:59:00</maximum>
+                </bounds>
+              </dateTimeDomain>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>depth</attributeName>
+          <attributeLabel>yuba_instantaneous_passage</attributeLabel>
+          <attributeDefinition>Fish body depth, as estimated by VAKI Winari software.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>millimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">40</minimum>
+                  <maximum exclusive="false">255</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>length</attributeName>
+          <attributeLabel>yuba_instantaneous_passage</attributeLabel>
+          <attributeDefinition>Fish body length, as estimated by VAKI Winari software; see RMT VAKI Riverwatcher Protocol for additional information.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">189</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>ladder</attributeName>
+          <attributeLabel>yuba_instantaneous_passage</attributeLabel>
+          <attributeDefinition>Location of data collection. Levels = c("north", "south"). North refers to DPD North ladder (river right looking downstream); South refers to DPD South ladder (river left looking downstream).</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Location of data collection. Levels = c("north", "south"). North refers to DPD North ladder (river right looking downstream); South refers to DPD South ladder (river left looking downstream).</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>direction_of_passage</attributeName>
+          <attributeLabel>yuba_instantaneous_passage</attributeLabel>
+          <attributeDefinition>Direction of fish travel through VAKI chute. Levels = c("up", "down").</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Direction of fish travel through VAKI chute. Levels = c("up", "down").</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>adipose_clipped</attributeName>
+          <attributeLabel>yuba_instantaneous_passage</attributeLabel>
+          <attributeDefinition>Whether or not fish observed had a clipped adipose fin, determined by PSMFC staff review of VAKI imagery. Levels = c("TRUE", "FALSE", "undetermined").</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Whether or not fish observed had a clipped adipose fin, determined by PSMFC staff review of VAKI imagery. Levels = c("TRUE", "FALSE", "undetermined").</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>species</attributeName>
+          <attributeLabel>yuba_instantaneous_passage</attributeLabel>
+          <attributeDefinition>Species of fish observed. Levels = "chinook".</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Species of fish observed. Levels = "chinook".</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>count</attributeName>
+          <attributeLabel>yuba_instantaneous_passage</attributeLabel>
+          <attributeDefinition>Count of fish observed. Each observation in the dataset is for one fish.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>count of fish</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>integer</numberType>
+                <bounds>
+                  <minimum exclusive="false">1</minimum>
+                  <maximum exclusive="false">1</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+      <numberOfRecords>107557</numberOfRecords>
+    </dataTable>
+    <dataTable>
+      <entityName>yuba_daily_uncorrected_passage.csv</entityName>
+      <entityDescription>Uncorrected daily net passage counts - not to be used for modeling or analysis</entityDescription>
+      <physical>
+        <objectName>yuba_daily_uncorrected_passage.csv</objectName>
+        <size unit="bytes">882740</size>
+        <authentication method="MD5">afd2caa93f2495258d765ce9760b5177</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-yuba-adult-edi/main/data/yuba_daily_uncorrected_passage.csv</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>date</attributeName>
+          <attributeLabel>yuba_daily_uncorrected_passage</attributeLabel>
+          <attributeDefinition>Calendar date.</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD</formatString>
+              <dateTimeDomain>
+                <bounds>
+                  <minimum exclusive="false">2004-01-01</minimum>
+                  <maximum exclusive="false">2020-02-28</maximum>
+                </bounds>
+              </dateTimeDomain>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>biological_year</attributeName>
+          <attributeLabel>yuba_daily_uncorrected_passage</attributeLabel>
+          <attributeDefinition>Biological year for Yuba River Chinook salmon adult passage. Defined as extending from March 1 through February of the following year annually based on lifestage periodicities identified in RMT (2013).</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY</formatString>
+              <dateTimeDomain>
+                <bounds>
+                  <minimum exclusive="false">2004</minimum>
+                  <maximum exclusive="false">2022</maximum>
+                </bounds>
+              </dateTimeDomain>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>ladder</attributeName>
+          <attributeLabel>yuba_daily_uncorrected_passage</attributeLabel>
+          <attributeDefinition>Ladder location of VAKI Riverwatcher. Levels = c("north", "south"). North refers to Dagurerre Point Dam North ladder (river right looking downstream), south refers to Daguerre Point Dam South ladder (river left looking downstream).</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Ladder location of VAKI Riverwatcher. Levels = c("north", "south"). North refers to Dagurerre Point Dam North ladder (river right looking downstream), south refers to Daguerre Point Dam South ladder (river left looking downstream).</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>count</attributeName>
+          <attributeLabel>yuba_daily_uncorrected_passage</attributeLabel>
+          <attributeDefinition>Daily net upstream count of fish, uncorrected for periods of VAKI Riverwatcher non-operation.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>count of fish</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>integer</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">539</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>adipose_clipped</attributeName>
+          <attributeLabel>yuba_daily_uncorrected_passage</attributeLabel>
+          <attributeDefinition>Whether or not the fish observed had a clipped adipose fin. Levels = c(TRUE, FALSE). If FALSE includes adipose fin intact and adipose fin unidentified; TRUE includes fish with adipose fin clipped.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Whether or not the fish observed had a clipped adipose fin. Levels = c(TRUE, FALSE). If FALSE includes adipose fin intact and adipose fin unidentified; TRUE includes fish with adipose fin clipped.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>vaki_operation</attributeName>
+          <attributeLabel>yuba_daily_uncorrected_passage</attributeLabel>
+          <attributeDefinition>Daily proportion of hours during which the VAKI Riverwatcher at the associated ladder was operational; values range from 0 (indicating 0 hours of operation) to 1 (indicating 24 hours of operation); inclusive.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>proportion</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">1</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+      <numberOfRecords>27756</numberOfRecords>
+    </dataTable>
+    <dataTable>
+      <entityName>yuba_daily_corrected_passage.csv</entityName>
+      <entityDescription>Corrected and run differentiated daily passage counts</entityDescription>
+      <physical>
+        <objectName>yuba_daily_corrected_passage.csv</objectName>
+        <size unit="bytes">1651235</size>
+        <authentication method="MD5">254a77fec1f85cb22bed05cbd564f39d</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-yuba-adult-edi/main/data/yuba_daily_corrected_passage.csv</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>date</attributeName>
+          <attributeLabel>yuba_daily_corrected_passage</attributeLabel>
+          <attributeDefinition>Calendar date.</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD</formatString>
+              <dateTimeDomain>
+                <bounds>
+                  <minimum exclusive="false">2004-03-01</minimum>
+                  <maximum exclusive="false">2023-02-28</maximum>
+                </bounds>
+              </dateTimeDomain>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>biological_year</attributeName>
+          <attributeLabel>yuba_daily_corrected_passage</attributeLabel>
+          <attributeDefinition>Biological year for Yuba River Chinook salmon adult passage. Defined as extending from March 1 through February of the following year annually based on lifestage periodicities identified in RMT (2013).</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY</formatString>
+              <dateTimeDomain>
+                <bounds>
+                  <minimum exclusive="false">2004</minimum>
+                  <maximum exclusive="false">2022</maximum>
+                </bounds>
+              </dateTimeDomain>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>count</attributeName>
+          <attributeLabel>yuba_daily_corrected_passage</attributeLabel>
+          <attributeDefinition>Daily net upstream passage estimate of Chinook salmon, reflecting application of the analyses and methodologies presented in Poxon and Bratovich (2020) to correct net upstream counts for periods of VAKI system non-operation and differentiate between run types.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>count of fish</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>integer</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">538</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>run</attributeName>
+          <attributeLabel>yuba_daily_corrected_passage</attributeLabel>
+          <attributeDefinition>Run type as differentiated by methods outlined in Poxon and Bratovich (2020). Levels = c("early spring", "late spring", "fall", and "no run differentiated"). "Early spring" are those individuals passing upstream of Daguerre Point Dam from March 1 through July 14; “late spring” are the portion of those individuals passing upstream of Daguerre Point Dam from July 15 through September 30 that are attributed to the spring-run Chinook salmon run type; “fall” are the portion of those individuals passing upstream of Daguerre Point Dam from July 15 through September 30 that are attributed to the spring-run Chinook salmon run type, as well as those individuals passing upstream of Daguerre Point Dam from October 1 through the end of February; “no run differentiated” refers to dates where no run differentiation analysis could be completed. See methods for details on time series from 2016, 2017, and biological year 2019.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Run type as differentiated by methods outlined in Poxon and Bratovich (2020). Levels = c("early spring", "late spring", "fall", and "no run differentiated"). "Early spring" are those individuals passing upstream of Daguerre Point Dam from March 1 through July 14; “late spring” are the portion of those individuals passing upstream of Daguerre Point Dam from July 15 through September 30 that are attributed to the spring-run Chinook salmon run type; “fall” are the portion of those individuals passing upstream of Daguerre Point Dam from July 15 through September 30 that are attributed to the spring-run Chinook salmon run type, as well as those individuals passing upstream of Daguerre Point Dam from October 1 through the end of February; “no run differentiated” refers to dates where no run differentiation analysis could be completed. See methods for details on time series from 2016, 2017, and biological year 2019.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>adipose_clipped</attributeName>
+          <attributeLabel>yuba_daily_corrected_passage</attributeLabel>
+          <attributeDefinition>Whether or not an individual fish's adipose fin was clipped. Levels = c(TRUE, FALSE). If TRUE, the adipose fin was clipped; if FALSE, the adipose fin was either intact or unidentified.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Whether or not an individual fish's adipose fin was clipped. Levels = c(TRUE, FALSE). If TRUE, the adipose fin was clipped; if FALSE, the adipose fin was either intact or unidentified.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+      <numberOfRecords>37250</numberOfRecords>
+    </dataTable>
+    <otherEntity>
+      <entityName>Poxon_and_Bratovich_2020.pdf</entityName>
+      <entityDescription>Methods for Lower Yuba River Chinook Salmon Passage and Run Differentiation Analyses</entityDescription>
+      <physical>
+        <objectName>Poxon_and_Bratovich_2020.pdf</objectName>
+        <size unit="bytes">12234027</size>
+        <authentication method="MD5">bc0d5dd8b345c8470ce63d846af306bb</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>PDF</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-yuba-adult-edi/main/data-raw/metadata/Poxon_and_Bratovich_2020.pdf</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>PDF</entityType>
+    </otherEntity>
+  </dataset>
+  <additionalMetadata>
+    <metadata>
+      <unitList>
+        <unit id="count of fish" name="count of fish" unitType="dimensionless">
+          <description>number of fish counted</description>
+        </unit>
+        <unit id="proportion" name="proportion" unitType="dimensionless">
+          <description>proportion of day operational</description>
+        </unit>
+      </unitList>
+    </metadata>
+  </additionalMetadata>
+</eml:eml>
