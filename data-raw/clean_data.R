@@ -21,8 +21,8 @@ gcs_get_object(object_name = "adult-upstream-passage-monitoring/yuba-river/data-
                saveToDisk = here::here("data-raw", "yuba_corrected_daily.xlsx"),
                overwrite = TRUE)
 
-instant_raw <- readxl::read_xlsx(here::here("data-raw", "yuba_instantaneous.xlsx"),
-                                       sheet = "Yuba VAKI Chinook")
+instant_raw <- readxl::read_xlsx(here::here("data-raw", "yuba_instantaneous.xlsx"), # flagging that there are many NA values for depth
+                                       sheet = "Yuba VAKI Chinook") # a lot of the NA's are from recent years
 instant_metadata <- readxl::read_xlsx(here::here("data-raw", "yuba_instantaneous.xlsx"),
                                       sheet = "Metadata",
                                       skip = 7)
