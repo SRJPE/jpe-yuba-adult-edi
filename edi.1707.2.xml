@@ -48,7 +48,7 @@
       <electronicMailAddress>jason.kindopp@water.ca.gov</electronicMailAddress>
       <role>associate</role>
     </associatedParty>
-    <pubDate>2026-02-23</pubDate>
+    <pubDate>2026-04-28</pubDate>
     <abstract>
       <para>
     Adult salmonid data on the Yuba River is collected and managed by
@@ -204,9 +204,8 @@
       operated within the two fish ladders (North and South) at Daguerre
       Point Dam. This dataset is considered to be a census for spring
       run chinook because mostly all spawn upstream of Daguerre Point
-      Dam. Passage estimates using the adult upstream data have been
-      modeled for 2004 – 2023. The modeling approach involves
-      determining the run and interpolating for missing data.
+      Dam. The modeling approach involves determining the run and
+      interpolating for missing data.
     </para>
             <para>
       Data is available in tables following sequential QA/QC processes
@@ -267,9 +266,9 @@
       series is Total Chinook Salmon. Table 1 in Poxon and Bratovich
       (2020), which did not acknowledge the limitations of 2019 data
       precluding run differentiation, has been superseded by Table 1 in
-      Poxon and Bratovich (2023). Table 1 in Poxon and Bratovich (2023)
+      Poxon and Bratovich (2024). Table 1 in Poxon and Bratovich (2024)
       is also expanded to include results of count correction and run
-      differentiation analyses for biological years 2020 through 2022.
+      differentiation analyses for biological years 2020 through 2024.
     </para>
           </section>
           <section>
