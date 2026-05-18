@@ -26,7 +26,7 @@
         <givenName>Brian</givenName>
         <surName>Poxon</surName>
       </individualName>
-      <organizationName>HDR, Inc.</organizationName>
+      <organizationName>RBI</organizationName>
       <electronicMailAddress>Brian.Poxon@hdrinc.com</electronicMailAddress>
       <role>principal investigator</role>
     </associatedParty>
@@ -48,7 +48,7 @@
       <electronicMailAddress>jason.kindopp@water.ca.gov</electronicMailAddress>
       <role>associate</role>
     </associatedParty>
-    <pubDate>2026-04-28</pubDate>
+    <pubDate>2026-05-18</pubDate>
     <abstract>
       <para>
     Adult salmonid data on the Yuba River is collected and managed by
@@ -708,8 +708,8 @@
       <entityDescription>Methods for Lower Yuba River Chinook Salmon Passage and Run Differentiation Analyses</entityDescription>
       <physical>
         <objectName>Poxon_and_Bratovich_Supplementary_Report.zip</objectName>
-        <size unit="bytes">11670384</size>
-        <authentication method="MD5">76df52be8c4ae3185c7b0305841af1e7</authentication>
+        <size unit="bytes">11671772</size>
+        <authentication method="MD5">e9d47341c69326a135a7338b26c18875</authentication>
         <dataFormat>
           <externallyDefinedFormat>
             <formatName>zip</formatName>
