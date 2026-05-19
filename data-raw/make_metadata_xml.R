@@ -14,7 +14,7 @@ datatable_metadata <-
                 datatable_description = c("Instantaneous passage records - not to be used for modeling or analysis",
                                           "Uncorrected daily net passage counts - not to be used for modeling or analysis",
                                           "Corrected and run differentiated daily passage counts"),
-                datatable_url = paste0("https://raw.githubusercontent.com/SRJPE/jpe-yuba-adult-edi/main/data/",
+                datatable_url = paste0("https://raw.githubusercontent.com/SRJPE/jpe-yuba-adult-edi/edi-updates-02-2026/data/",
                                        c("yuba_instantaneous_passage.csv",
                                          "yuba_daily_uncorrected_passage.csv",
                                          "yuba_daily_corrected_passage.csv")))
@@ -28,11 +28,11 @@ datatable_metadata <-
 #
 # other_entity_metadata_1$physical$dataFormat <- list("externallyDefinedFormat" = list("formatName" = "PDF"))
 #
-# other_entity_metadata_2 <- list("file_name" = "Poxon_and_Bratovich_2023_LYR_Chinook_Passage_and_Run_Differentiation_Update_Summary_Table.pdf",
+# other_entity_metadata_2 <- list("file_name" = "Poxon_and_Bratovich_2025_LYR_Chinook_Passage_and_Run_Differentiation_Update_Summary_Table_BY2004-2024.pdf",
 #                                 "file_description" = "Summary Table of Results for Lower Yuba River VAKI Riverwatcher™ Chinook Salmon Passage and Run Differentiation Analyses for Biological Years 2004-2022",
 #                                 "file_type" = "PDF",
-#                                 "physical" = create_physical("data-raw/metadata/Poxon_and_Bratovich_2023_LYR_Chinook_Passage_and_Run_Differentiation_Update_Summary_Table.pdf",
-#                                                                data_url = "https://raw.githubusercontent.com/SRJPE/jpe-yuba-adult-edi/main/data-raw/metadata/Poxon_and_Bratovich_2023_LYR_Chinook_Passage_and_Run_Differentiation_Update_Summary_Table.pdf")
+#                                 "physical" = create_physical("data-raw/metadata/Poxon_and_Bratovich_2025_LYR_Chinook_Passage_and_Run_Differentiation_Update_Summary_Table_BY2004-2024.pdf",
+#                                                                data_url = "https://raw.githubusercontent.com/SRJPE/jpe-yuba-adult-edi/main/data-raw/metadata/Poxon_and_Bratovich_2025_LYR_Chinook_Passage_and_Run_Differentiation_Update_Summary_Table_BY2004-2024.pdf")
 # )
 # other_entity_metadata_2$physical$dataFormat <- list("externallyDefinedFormat" = list("formatName" = "PDF"))
 
@@ -40,7 +40,7 @@ other_entity_metadata_1 <- list("file_name" = "Poxon_and_Bratovich_Supplementary
                               "file_description" = "Methods for Lower Yuba River Chinook Salmon Passage and Run Differentiation Analyses",
                               "file_type" = "zip",
                               "physical" = create_physical("data-raw/metadata/Poxon_and_Bratovich_Supplementary_Report.zip",
-                                                           data_url = "https://raw.githubusercontent.com/SRJPE/jpe-yuba-adult-edi/main/data-raw/metadata/Poxon_and_Bratovich_Supplementary_Report.zip"))
+                                                           data_url = "https://raw.githubusercontent.com/SRJPE/jpe-yuba-adult-edi/edi-updates-02-2026/data-raw/metadata/Poxon_and_Bratovich_Supplementary_Report.zip"))
 
 other_entity_metadata_1$physical$dataFormat <- list("externallyDefinedFormat" = list("formatName" = "zip"))
 
@@ -56,7 +56,7 @@ abstract_docx <- "data-raw/metadata/abstract.docx"
 methods_md <- "data-raw/metadata/methods.md"
 
 #edi_number <- reserve_edi_id(user_id = Sys.getenv("EDI_USER_ID"), password = Sys.getenv("EDI_PASSWORD"))
-edi_number <- "edi.1707.1"
+edi_number <- "edi.1707.2"
 
 dataset <- list() |>
   add_pub_date() |>
